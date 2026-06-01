@@ -1,0 +1,21 @@
+# system
+.DS_Store
+Thumbs.db
+
+# local env
+.env
+.env.*
+!.env.example
+
+# dependencies / builds
+node_modules/
+dist/
+build/
+
+# logs
+*.log
+
+# local backups
+*.backup*
+*.bak
+*~
