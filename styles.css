@@ -3856,3 +3856,257 @@ body.thank-you-page {
     font-size: clamp(2.8rem, 14vw, 4rem);
   }
 }
+
+/* UPDATE — zdjęcia w testimonialach i sekcji Firmus */
+.avatar--photo {
+  object-fit: cover !important;
+  object-position: center !important;
+  background: transparent !important;
+  color: transparent !important;
+  border: 2px solid rgba(31, 59, 42, .08) !important;
+}
+
+.testimonial .avatar--photo {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.avatar--krzysztof {
+  width: 52px !important;
+  height: 52px !important;
+}
+
+@media (max-width: 680px) {
+  .testimonial .avatar--photo {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .avatar--krzysztof {
+    width: 46px !important;
+    height: 46px !important;
+  }
+}
+
+/* UPDATE — zdjęcia w testimonialach */
+.testimonial .avatar--photo {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 999px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  background: transparent !important;
+  border: 2px solid rgba(31, 59, 42, .10) !important;
+}
+
+.about-photo {
+  width: 58px !important;
+  height: 58px !important;
+  border-radius: 999px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  margin-bottom: 12px !important;
+  border: 2px solid rgba(31, 59, 42, .10) !important;
+}
+
+@media (max-width: 680px) {
+  .testimonial .avatar--photo {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .about-photo {
+    width: 52px !important;
+    height: 52px !important;
+  }
+}
+
+/* UPDATE — Krzysztof jako twarz Firmus, nie mały avatar */
+.avatar:has(+ div .about-photo) {
+  display: none !important;
+}
+
+.about-photo {
+  width: 104px !important;
+  height: 104px !important;
+  border-radius: 999px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  margin: 0 auto 16px !important;
+  border: 3px solid rgba(31, 59, 42, .12) !important;
+  box-shadow: 0 14px 34px rgba(31, 59, 42, .12) !important;
+}
+
+.about-photo + strong {
+  display: block !important;
+  text-align: center !important;
+}
+
+.about-photo + strong + span {
+  display: block !important;
+  text-align: center !important;
+}
+
+@media (max-width: 680px) {
+  .about-photo {
+    width: 92px !important;
+    height: 92px !important;
+    margin-bottom: 14px !important;
+  }
+}
+
+/* FIX — Krzysztof w sekcji Firmus jako większa twarz marki */
+.about-photo {
+  width: 112px !important;
+  height: 112px !important;
+  border-radius: 999px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  margin: 0 auto 16px !important;
+  border: 3px solid rgba(31, 59, 42, .12) !important;
+  box-shadow: 0 14px 34px rgba(31, 59, 42, .12) !important;
+}
+
+.about-photo + strong {
+  display: block !important;
+  text-align: center !important;
+}
+
+.about-photo + strong + span {
+  display: block !important;
+  text-align: center !important;
+}
+
+@media (max-width: 680px) {
+  .about-photo {
+    width: 96px !important;
+    height: 96px !important;
+  }
+}
+
+/* UPDATE — przebudowany podpis Krzysztofa jako twarz Firmus */
+.signature.signature--person {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  width: auto !important;
+  max-width: 420px !important;
+  margin-top: 42px !important;
+  padding: 16px 22px 16px 16px !important;
+  border-radius: 32px !important;
+  border: 1px solid rgba(31, 59, 42, .12) !important;
+  background: rgba(255, 253, 247, .72) !important;
+  box-shadow: 0 18px 46px rgba(31, 59, 42, .08) !important;
+}
+
+.signature--person .signature__photo {
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: 112px !important;
+  height: 112px !important;
+  border-radius: 999px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border: 3px solid rgba(31, 59, 42, .10) !important;
+  box-shadow: 0 10px 28px rgba(31, 59, 42, .12) !important;
+}
+
+.signature--person .signature__body {
+  display: grid !important;
+  gap: 4px !important;
+}
+
+.signature--person .signature__body strong {
+  display: block !important;
+  color: var(--ink) !important;
+  font-size: 1.16rem !important;
+  line-height: 1.1 !important;
+}
+
+.signature--person .signature__body small {
+  display: block !important;
+  color: var(--muted) !important;
+  font-size: .98rem !important;
+  line-height: 1.3 !important;
+}
+
+/* wyłącz stare style, które robiły kółko / literę K */
+.signature.signature--person > span,
+.signature.signature--person .about-photo {
+  display: none !important;
+}
+
+@media (max-width: 680px) {
+  .signature.signature--person {
+    margin-top: 36px !important;
+    padding: 14px 18px 14px 14px !important;
+    gap: 15px !important;
+    border-radius: 28px !important;
+  }
+
+  .signature--person .signature__photo {
+    width: 92px !important;
+    height: 92px !important;
+  }
+
+  .signature--person .signature__body strong {
+    font-size: 1.08rem !important;
+  }
+
+  .signature--person .signature__body small {
+    font-size: .94rem !important;
+  }
+}
+
+/* UPDATE — graficzny podpis Krzysztofa + telefon */
+.signature__name-image {
+  display: block !important;
+  width: min(230px, 46vw) !important;
+  height: auto !important;
+  margin: 0 0 2px !important;
+}
+
+.signature--person .signature__phone {
+  display: block !important;
+  margin-top: 6px !important;
+  color: var(--forest) !important;
+  font-size: .98rem !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  letter-spacing: .01em !important;
+}
+
+.signature--person .signature__phone:hover,
+.signature--person .signature__phone:focus {
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+@media (max-width: 680px) {
+  .signature__name-image {
+    width: min(210px, 50vw) !important;
+  }
+
+  .signature--person .signature__phone {
+    font-size: .96rem !important;
+  }
+}
+
+/* FIX — podpis Krzysztofa w stylu Caveat */
+.signature__name-image {
+  display: block !important;
+  width: min(250px, 54vw) !important;
+  height: auto !important;
+  margin: 0 0 4px !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 680px) {
+  .signature__name-image {
+    width: min(225px, 56vw) !important;
+  }
+}

@@ -105,7 +105,7 @@ function updatePrice() {
   priceValue.textContent = priceText;
   priceNote.textContent = "";
   if (priceAssurance) {
-    priceAssurance.textContent = "Ta cena znajdzie się w umowie.";
+    priceAssurance.innerHTML = "Ta cena znajdzie się w umowie.<br />Obejmuje rozliczenie miesiąca wraz z deklaracjami JPK oraz ZUS właściciela.";
   }
   setHiddenValue("hiddenPrice", priceText);
 }
