@@ -211,6 +211,7 @@
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
+                netlify-honeypot="bot-field"
               >
                 <input type="hidden" name="form-name" value="firmus-umowa" />
                 <input type="hidden" name="wybrana_liczba_dokumentow" id="hiddenDocs" />
@@ -384,5 +385,19 @@
   </div>
 
   <script src="/script.js" defer></script>
+
+  <!-- Netlify form detection fallback -->
+  <form name="firmus-umowa" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="firmus-umowa" />
+    <input name="bot-field" />
+    <input type="email" name="email" />
+    <input type="text" name="nip" />
+    <input type="text" name="wybrana_liczba_dokumentow" />
+    <input type="text" name="wybrani_pracownicy_umowy" />
+    <input type="text" name="wyliczona_cena" />
+    <input type="checkbox" name="zgoda_umowa_kontakt" value="tak" />
+  </form>
+  <!-- /Netlify form detection fallback -->
+
 </body>
 </html>
