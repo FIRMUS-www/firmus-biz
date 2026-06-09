@@ -29,12 +29,20 @@ function getCompanyNameFromPath() {
 function applyPersonalizedEyebrow() {
   const companyName = getCompanyNameFromPath();
   const eyebrow = document.getElementById("offerEyebrow");
+  const heroTitle = document.getElementById("heroTitle");
+  const heroLead = document.getElementById("heroLead");
 
   if (!eyebrow) return;
 
   if (companyName) {
     document.body.classList.add("is-personalized-site");
     eyebrow.textContent = `Oferta dla firmy: ${companyName}`;
+    if (heroTitle) {
+      heroTitle.textContent = "Kompleksowa obsługa księgowa od 120 zł/msc";
+    }
+    if (heroLead) {
+      heroLead.textContent = "Poniżej wycenisz koszt miesięcznej obsługi i sprawdzisz treść umowy.";
+    }
     document.title = `Oferta dla firmy: ${companyName} — Firmus`;
     return;
   }
