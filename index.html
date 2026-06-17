@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet" />
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css?v=1781700217" />
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -157,7 +157,7 @@
     <section class="section pricing combined-offer offer-flow" id="cena" aria-labelledby="pricing-title">
       <div class="offer-flow__top">
         <div class="container offer-flow__intro reveal">
-          <p class="eyebrow">Sprawdź cenę i umowę</p>
+          <p class="eyebrow">Sprawdź cenę</p>
           <h2 id="pricing-title" class="sr-only">Sprawdź cenę i umowę</h2>
         </div>
       </div>
@@ -168,16 +168,26 @@
             <div class="price-box">
               <span>Miesięczny koszt obsługi:</span>
               <strong id="priceValue">120 zł brutto</strong>
+                  <div class="price-handnote" aria-hidden="true">
+                    <svg viewBox="0 0 170 70" focusable="false">
+                      <path d="M158 12 C122 50 82 54 44 34" />
+                      <path d="M44 34 L60 28" />
+                      <path d="M44 34 L55 48" />
+                    </svg>
+                    <span>ta cena znajdzie się w umowie</span>
+                  </div>
               <small id="priceNote"></small>
             </div>
 
             <div class="offer-flow__price-note">
-              <strong id="priceAssurance">Ta cena znajdzie się w umowie.<br />Obejmuje rozliczenie miesiąca wraz z deklaracjami JPK oraz ZUS właściciela.</strong>
+              <strong id="priceAssurance">W tej cenie:<br /><span>– rozliczenie miesiąca bez dopłaty za VAT / JPK</span><br /><span>– deklaracje ZUS właściciela JDG</span><br /><span>– wygodna aplikacja do fakturowania z KSeF</span></strong>
             </div>
           </div>
 
           <div class="offer-flow__body">
             <div class="calculator quote-panel" aria-label="Kalkulator ceny">
+              <h3 class="calc-section-title">Wybierz zakres i wyceń obsługę</h3>
+
               <div class="calc-grid">
                 <fieldset class="calc-field">
                   <legend>Liczba dokumentów miesięcznie</legend>
@@ -201,9 +211,19 @@
 
             <div class="contract-panel" id="umowa">
               <div class="contract-panel__copy">
-                <p class="eyebrow">Szkic umowy</p>
+                <p class="eyebrow contract-text-pill">Tekst umowy</p>
+
+                <div class="contract-note" aria-hidden="true">
+                  <span>umowa bez niespodzianek</span>
+                  <svg viewBox="0 0 180 72" focusable="false">
+                    <path d="M8 18 C56 2 112 18 160 52" />
+                    <path d="M160 52 L139 50" />
+                    <path d="M160 52 L151 32" />
+                  </svg>
+                </div>
+
                 <h3>Sprawdź treść umowy.</h3>
-                <p>To do niczego Cię nie zobowiązuje.</p>
+                <p>To do niczego Cię nie zobowiązuje. Możesz spokojnie sprawdzić treść umowy. Nie ma w niej ukrytych dopłat ani niezrozumiałych zapisów drobnym druczkiem.</p>
               </div>
 
               <form class="lead-form" netlify
@@ -237,7 +257,7 @@
                 <label class="check contract-consent">
                   <input type="checkbox" name="zgoda_umowa_kontakt" value="tak" required />
                   <span>
-                    Chcę otrzymać szkic umowy na email. Wysłanie danych nie oznacza zawarcia umowy. Akceptuję <a href="/polityka-prywatnosci.html">politykę prywatności</a>.
+                    Chcę otrzymać treść umowy na email. Wysłanie danych nie oznacza zawarcia umowy. Akceptuję <a href="/polityka-prywatnosci.html">politykę prywatności</a>.
                   </span>
                 </label>
 
@@ -384,7 +404,7 @@
     <a href="tel:+48727791155">Zadzwoń</a>
   </div>
 
-  <script src="/script.js" defer></script>
+  <script src="/script.js?v=1781700217" defer></script>
 
   <!-- Netlify form detection fallback -->
   <form name="firmus-umowa" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>

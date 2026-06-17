@@ -82,6 +82,7 @@ function updatePrice() {
   const priceValue = document.getElementById("priceValue");
   const priceNote = document.getElementById("priceNote");
   const priceAssurance = document.getElementById("priceAssurance");
+  const priceHandnote = document.querySelector(".price-handnote");
 
   if (!priceValue || !priceNote) return;
 
@@ -100,6 +101,7 @@ function updatePrice() {
   if (!docsTier || !staffTier || docsTier.price === null || staffTier.price === null) {
     priceValue.textContent = "Wycena telefoniczna";
     priceNote.textContent = "";
+    if (priceHandnote) priceHandnote.classList.add("is-hidden");
     if (priceAssurance) {
       priceAssurance.textContent = "Ten zakres wymaga indywidualnego ustalenia ceny. Zadzwoń: 727 791 155.";
     }
@@ -112,8 +114,9 @@ function updatePrice() {
 
   priceValue.textContent = priceText;
   priceNote.textContent = "";
+  if (priceHandnote) priceHandnote.classList.remove("is-hidden");
   if (priceAssurance) {
-    priceAssurance.innerHTML = "Ta cena znajdzie się w umowie.<br />Obejmuje rozliczenie miesiąca wraz z deklaracjami JPK oraz ZUS właściciela.";
+    priceAssurance.innerHTML = "W tej cenie:<br /><span>– rozliczenie miesiąca bez dopłaty za VAT / JPK</span><br /><span>– deklaracje ZUS właściciela JDG</span><br /><span>– wygodna aplikacja do fakturowania z KSeF</span>";
   }
   setHiddenValue("hiddenPrice", priceText);
 }
@@ -208,3 +211,15 @@ window.addEventListener("resize", syncOfferFlowCtaVisibility);
 window.addEventListener("load", syncOfferFlowCtaVisibility);
 syncOfferFlowCtaVisibility();
 
+
+
+// CONTRACT PILL FIX — START
+document.addEventListener("DOMContentLoaded", () => {
+  const pill = document.querySelector("#umowa .contract-panel__copy .contract-text-pill");
+  if (pill) {
+    pill.textContent = "Tekst umowy";
+    pill.style.setProperty("text-transform", "none", "important");
+    pill.style.setProperty("letter-spacing", "0.02em", "important");
+  }
+});
+// CONTRACT PILL FIX — END

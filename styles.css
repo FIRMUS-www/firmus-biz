@@ -4110,3 +4110,304 @@ body.thank-you-page {
     width: min(225px, 56vw) !important;
   }
 }
+
+/* Contract handwritten note */
+.contract-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 18px;
+  color: #cf4f2b;
+  font-weight: 800;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  letter-spacing: 0.01em;
+  transform: rotate(-1.5deg);
+}
+
+.contract-note svg {
+  width: 92px;
+  height: 46px;
+  overflow: visible;
+  flex: 0 0 auto;
+}
+
+.contract-note path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 720px) {
+  .contract-note {
+    align-items: flex-start;
+    gap: 8px;
+    margin: 14px 0 16px;
+    transform: none;
+  }
+
+  .contract-note svg {
+    width: 58px;
+    height: 34px;
+  }
+}
+
+/* CONTRACT NOTE — START */
+.contract-panel__copy {
+  position: relative;
+}
+
+.contract-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 54px 0 2px 132px;
+  color: #d76a2d;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.05rem, 1.7vw, 1.32rem);
+  line-height: 1.1;
+  transform: translateY(34px);
+}
+
+.contract-note svg {
+  width: 58px;
+  height: 34px;
+  flex: 0 0 auto;
+  overflow: visible;
+  transform: translateY(9px);
+  opacity: 0.78;
+}
+
+.contract-note path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contract-note span {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .contract-note {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .contract-note {
+    gap: 8px;
+    margin: 34px 0 2px;
+    font-size: 1rem;
+    transform: translateY(24px);
+  }
+
+  .contract-note svg {
+    width: 48px;
+    height: 28px;
+    transform: translateY(7px);
+  }
+}
+/* CONTRACT NOTE — END */
+
+/* PRICE HANDNOTE — START */
+.calculator.quote-panel {
+  position: relative;
+}
+
+.price-handnote {
+  position: absolute;
+  top: 56px;
+  left: 410px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #9a4a2e;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(0.95rem, 1.25vw, 1.1rem);
+  line-height: 1.1;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.price-handnote svg {
+  width: 76px;
+  height: 34px;
+  flex: 0 0 auto;
+  overflow: visible;
+  opacity: 0.82;
+  transform: translate(10px, 16px) rotate(-34deg) scaleY(-1);
+}
+
+.price-handnote path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.price-handnote span {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#priceAssurance {
+  display: block;
+  margin-top: 34px;
+  color: #7a4a36;
+  font-size: clamp(0.98rem, 1.3vw, 1.1rem);
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+#priceAssurance > span {
+  display: inline-block;
+  margin-top: 4px;
+  color: #5f5148;
+  font-weight: 650;
+}
+
+@media (max-width: 900px) {
+  .price-handnote {
+    position: static;
+    margin: 12px 0 0;
+  }
+
+  .price-handnote svg {
+    width: 58px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 720px) {
+  .price-handnote {
+    gap: 8px;
+    font-size: 1rem;
+  }
+
+  .price-handnote svg {
+    width: 50px;
+    height: 26px;
+  }
+
+  #priceAssurance {
+    font-size: 1rem;
+  }
+}
+/* PRICE HANDNOTE — END */
+
+/* PRICE ASSURANCE TEXT OVERRIDE — START */
+.offer-flow__price-note strong#priceAssurance {
+  display: block !important;
+  margin-top: 34px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #7a4a36 !important;
+  font-size: clamp(0.98rem, 1.3vw, 1.1rem) !important;
+  line-height: 1.45 !important;
+  font-weight: 800 !important;
+}
+
+.offer-flow__price-note strong#priceAssurance > span {
+  display: inline-block !important;
+  margin-top: 4px !important;
+  color: #5f5148 !important;
+  font-weight: 650 !important;
+}
+/* PRICE ASSURANCE TEXT OVERRIDE — END */
+
+/* CALC SECTION TITLE — START */
+.calc-section-title {
+  margin: 0 0 22px;
+  color: #2b2925;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+@media (max-width: 720px) {
+  .calc-section-title {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+  }
+}
+/* CALC SECTION TITLE — END */
+
+
+/* CONTRACT TEXT PILL FIX — START */
+#umowa .contract-panel__copy .contract-text-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 42px !important;
+  padding: 0 18px !important;
+  border-radius: 999px !important;
+  font-size: 0.92rem !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.03em !important;
+  text-transform: none !important;
+}
+/* CONTRACT TEXT PILL FIX — END */
+
+/* OFFER FLOW PILL ALIGN FINAL — START */
+.pricing.offer-flow .offer-flow__top {
+  margin: 0 0 28px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: var(--ink) !important;
+}
+
+.pricing.offer-flow .offer-flow__top::before {
+  display: none !important;
+}
+
+.pricing.offer-flow .offer-flow__intro {
+  width: min(1180px, calc(100% - 48px)) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.pricing.offer-flow .offer-flow__intro .eyebrow {
+  width: fit-content !important;
+  margin: 0 !important;
+}
+
+.pricing.offer-flow .offer-flow__card-wrap {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 720px) {
+  .pricing.offer-flow .offer-flow__top {
+    margin-bottom: 22px !important;
+  }
+
+  .pricing.offer-flow .offer-flow__intro {
+    width: min(100% - 40px, 1180px) !important;
+  }
+}
+/* OFFER FLOW PILL ALIGN FINAL — END */
+
+/* OFFER FLOW PILL NUDGE — START */
+.pricing.offer-flow .offer-flow__intro .eyebrow {
+  margin-left: 30px !important;
+}
+/* OFFER FLOW PILL NUDGE — END */
+
+/* PRICE HANDNOTE VISIBILITY — START */
+.price-handnote.is-hidden {
+  display: none !important;
+}
+/* PRICE HANDNOTE VISIBILITY — END */
