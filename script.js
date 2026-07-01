@@ -56,9 +56,13 @@ const pricingConfig = {
     { label: "do 10", price: 120 },
     { label: "11–20", price: 170 },
     { label: "21–30", price: 220 },
-    { label: "31–40", price: 280 },
-    { label: "41–50", price: 340 },
+    { label: "31–40", price: 270 },
+    { label: "41–50", price: 330 },
     { label: "powyżej 50", price: null }
+  ],
+  vat: [
+    { label: "bez VAT", multiplier: 1 },
+    { label: "VAT", multiplier: 1.5 }
   ],
   staff: [
     { label: "brak", price: 0 },
@@ -87,18 +91,22 @@ function updatePrice() {
   if (!priceValue || !priceNote) return;
 
   const docsIndex = Number(getSelectedValue("docs"));
+  const vatIndex = Number(getSelectedValue("vat"));
   const staffIndex = Number(getSelectedValue("staff"));
 
   const docsTier = pricingConfig.docs[docsIndex];
+  const vatTier = pricingConfig.vat[vatIndex];
   const staffTier = pricingConfig.staff[staffIndex];
 
   const docsLabel = docsTier ? docsTier.label : "";
+  const vatLabel = vatTier ? vatTier.label : "";
   const staffLabel = staffTier ? staffTier.label : "";
 
   setHiddenValue("hiddenDocs", docsLabel);
+  setHiddenValue("hiddenVat", vatLabel);
   setHiddenValue("hiddenStaff", staffLabel);
 
-  if (!docsTier || !staffTier || docsTier.price === null || staffTier.price === null) {
+  if (!docsTier || !vatTier || !staffTier || docsTier.price === null || staffTier.price === null) {
     priceValue.textContent = "Wycena telefoniczna";
     priceNote.textContent = "";
     if (priceHandnote) priceHandnote.classList.add("is-hidden");
@@ -109,14 +117,18 @@ function updatePrice() {
     return;
   }
 
-  const total = docsTier.price + staffTier.price;
+  const docsPrice = Math.round(docsTier.price * vatTier.multiplier);
+  const total = docsPrice + staffTier.price;
   const priceText = `${total} zł brutto`;
 
-  priceValue.textContent = priceText;
+  priceValue.innerHTML = `${total} <span class="price-currency">zł brutto</span>`;
   priceNote.textContent = "";
   if (priceHandnote) priceHandnote.classList.remove("is-hidden");
   if (priceAssurance) {
-    priceAssurance.innerHTML = "W tej cenie:<br /><span>– rozliczenie miesiąca bez dopłaty za VAT / JPK</span><br /><span>– deklaracje ZUS właściciela JDG</span><br /><span>– wygodna aplikacja do fakturowania z KSeF</span>";
+    const vatLine = vatTier.label === "VAT"
+      ? "– rozliczenie podatków z VAT / JPK"
+      : "– podatkowe rozliczenie miesiąca";
+    priceAssurance.innerHTML = `W tej cenie:<br /><span>${vatLine}</span><br /><span>– deklaracje ZUS właściciela JDG</span><br /><span>– wygodna aplikacja do fakturowania z KSeF</span>`;
   }
   setHiddenValue("hiddenPrice", priceText);
 }

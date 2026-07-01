@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet" />
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/styles.css?v=1781700217" />
+  <link rel="stylesheet" href="/styles.css?v=1782902637" />
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -167,7 +167,7 @@
           <div class="offer-flow__price-row">
             <div class="price-box">
               <span>Miesięczny koszt obsługi:</span>
-              <strong id="priceValue">120 zł brutto</strong>
+              <strong id="priceValue">120 <span class="price-currency">zł brutto</span></strong>
                   <div class="price-handnote" aria-hidden="true">
                     <svg viewBox="0 0 170 70" focusable="false">
                       <path d="M158 12 C122 50 82 54 44 34" />
@@ -180,13 +180,13 @@
             </div>
 
             <div class="offer-flow__price-note">
-              <strong id="priceAssurance">W tej cenie:<br /><span>– rozliczenie miesiąca bez dopłaty za VAT / JPK</span><br /><span>– deklaracje ZUS właściciela JDG</span><br /><span>– wygodna aplikacja do fakturowania z KSeF</span></strong>
+              <strong id="priceAssurance">W tej cenie:<br /><span>– podatkowe rozliczenie miesiąca</span><br /><span>– deklaracje ZUS właściciela JDG</span><br /><span>– wygodna aplikacja do fakturowania z KSeF</span></strong>
             </div>
           </div>
 
           <div class="offer-flow__body">
             <div class="calculator quote-panel" aria-label="Kalkulator ceny">
-              <h3 class="calc-section-title">Wybierz zakres i wyceń obsługę</h3>
+              <h3 class="calc-section-title">Wybierz podstawowy zakres obsługi</h3>
 
               <div class="calc-grid">
                 <fieldset class="calc-field">
@@ -200,30 +200,29 @@
                 </fieldset>
 
                 <fieldset class="calc-field">
-                  <legend>Pracownicy / umowy</legend>
-                  <label><input type="radio" name="staff" value="0" checked /> brak</label>
-                  <label><input type="radio" name="staff" value="1" /> 1–2 osoby</label>
-                  <label><input type="radio" name="staff" value="2" /> 3–5 osób</label>
-                  <label><input type="radio" name="staff" value="3" /> więcej niż 5 osób</label>
+                  <legend>VAT</legend>
+                  <label><input type="radio" name="vat" value="0" checked /> bez VAT</label>
+                  <label><input type="radio" name="vat" value="1" /> VAT</label>
                 </fieldset>
+
               </div>
             </div>
 
             <div class="contract-panel" id="umowa">
               <div class="contract-panel__copy">
-                <p class="eyebrow contract-text-pill">Tekst umowy</p>
+                <p class="eyebrow contract-text-pill">Umowa i warunki</p>
 
                 <div class="contract-note" aria-hidden="true">
-                  <span>umowa bez niespodzianek</span>
                   <svg viewBox="0 0 180 72" focusable="false">
-                    <path d="M8 18 C56 2 112 18 160 52" />
-                    <path d="M160 52 L139 50" />
-                    <path d="M160 52 L151 32" />
+                    <path d="M172 20 C124 2 68 18 20 52" />
+                    <path d="M20 52 L41 50" />
+                    <path d="M20 52 L29 32" />
                   </svg>
+                  <span>bez niespodzianek</span>
                 </div>
 
-                <h3>Sprawdź treść umowy.</h3>
-                <p>To do niczego Cię nie zobowiązuje. Możesz spokojnie sprawdzić treść umowy. Nie ma w niej ukrytych dopłat ani niezrozumiałych zapisów drobnym druczkiem.</p>
+                <h3>Sprawdź treść umowy</h3>
+                <p>Wyślę Ci treść umowy na email. To do niczego Cię nie zobowiązuje. Możesz spokojnie sprawdzić zakres obsługi i warunki współpracy.</p>
               </div>
 
               <form class="lead-form" netlify
@@ -235,6 +234,7 @@
               >
                 <input type="hidden" name="form-name" value="firmus-umowa" />
                 <input type="hidden" name="wybrana_liczba_dokumentow" id="hiddenDocs" />
+                <input type="hidden" name="wybrany_vat" id="hiddenVat" />
                 <input type="hidden" name="wybrani_pracownicy_umowy" id="hiddenStaff" />
                 <input type="hidden" name="wyliczona_cena" id="hiddenPrice" />
 
@@ -261,7 +261,7 @@
                   </span>
                 </label>
 
-                <button class="btn btn-primary form-button" type="submit">Chcę poznać umowę</button>
+                <button class="btn btn-primary form-button" type="submit">Chcę zobaczyć umowę</button>
               </form>
             </div>
           </div>
@@ -404,7 +404,7 @@
     <a href="tel:+48727791155">Zadzwoń</a>
   </div>
 
-  <script src="/script.js?v=1781700217" defer></script>
+  <script src="/script.js?v=1782902509" defer></script>
 
   <!-- Netlify form detection fallback -->
   <form name="firmus-umowa" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
@@ -413,6 +413,7 @@
     <input type="email" name="email" />
     <input type="text" name="nip" />
     <input type="text" name="wybrana_liczba_dokumentow" />
+    <input type="text" name="wybrany_vat" />
     <input type="text" name="wybrani_pracownicy_umowy" />
     <input type="text" name="wyliczona_cena" />
     <input type="checkbox" name="zgoda_umowa_kontakt" value="tak" />

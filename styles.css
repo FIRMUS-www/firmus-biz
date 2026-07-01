@@ -4411,3 +4411,86 @@ body.thank-you-page {
   display: none !important;
 }
 /* PRICE HANDNOTE VISIBILITY — END */
+
+/* CONTRACT CONSENT NO LINE — START */
+#umowa .contract-consent {
+  margin-top: 38px !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+/* CONTRACT CONSENT NO LINE — END */
+
+/* CONTRACT CONSENT LINE FINAL FIX — START */
+.pricing.offer-flow #umowa .lead-form .contract-consent,
+.offer-flow #umowa .lead-form .contract-consent,
+#umowa .lead-form .contract-consent {
+  margin-top: 34px !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+  box-shadow: none !important;
+}
+/* CONTRACT CONSENT LINE FINAL FIX — END */
+
+/* UMOWA ALL SEPARATORS REMOVE — START */
+#umowa .contract-panel__copy,
+.offer-flow #umowa .contract-panel__copy,
+.pricing.offer-flow #umowa .contract-panel__copy {
+  border-bottom: 0 !important;
+}
+
+#umowa .lead-form .form-grid,
+#umowa .lead-form .contract-consent {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+/* UMOWA ALL SEPARATORS REMOVE — END */
+
+/* CALC TITLE PLAIN + PRICE NOTE COLOR — START */
+#cena .calc-section-title {
+  display: block !important;
+  width: auto !important;
+  margin: 0 0 28px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #2b2925 !important;
+  font-size: clamp(1.18rem, 1.65vw, 1.42rem) !important;
+  line-height: 1.2 !important;
+  font-weight: 850 !important;
+}
+
+#cena .price-handnote {
+  color: #cf4f2b !important;
+}
+
+#cena .price-handnote span,
+#cena .price-handnote svg,
+#cena .price-handnote path {
+  color: currentColor !important;
+  stroke: currentColor !important;
+}
+/* CALC TITLE PLAIN + PRICE NOTE COLOR — END */
+
+/* PRICE HANDNOTE TYPOGRAPHY MATCH CONTRACT NOTE — START */
+#cena .price-handnote span {
+  font-family: "Playfair Display", serif !important;
+  font-style: italic !important;
+  font-weight: 900 !important;
+  font-size: clamp(1.05rem, 1.7vw, 1.32rem) !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.01em !important;
+}
+/* PRICE HANDNOTE TYPOGRAPHY MATCH CONTRACT NOTE — END */
+
+/* PRICE CURRENCY SIZE — START */
+#priceValue .price-currency {
+  display: inline-block !important;
+  color: inherit !important;
+  font-size: 0.78em !important;
+  line-height: 1 !important;
+  letter-spacing: -0.025em !important;
+  vertical-align: baseline !important;
+}
+/* PRICE CURRENCY SIZE — END */
