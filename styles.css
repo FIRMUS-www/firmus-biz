@@ -4494,3 +4494,265 @@ body.thank-you-page {
   vertical-align: baseline !important;
 }
 /* PRICE CURRENCY SIZE — END */
+
+/* PERSONALIZED HERO IDENTITY — START */
+body.is-personalized-site .hero__personalization {
+  display: block !important;
+  width: min(100%, 760px) !important;
+  margin: 0 0 34px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+body.is-personalized-site .hero__personalization::before {
+  display: none !important;
+}
+
+body.is-personalized-site .hero__personalization-label {
+  display: block !important;
+  margin: 0 0 7px !important;
+  color: rgba(247, 242, 233, .78) !important;
+  font-family: var(--font-sans) !important;
+  font-size: clamp(.82rem, 1vw, .96rem) !important;
+  line-height: 1.35 !important;
+  font-weight: 600 !important;
+  letter-spacing: .02em !important;
+  text-transform: none !important;
+}
+
+body.is-personalized-site .hero__company-name:not([hidden]) {
+  display: -webkit-box !important;
+  max-width: 24ch !important;
+  overflow: hidden !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow-wrap: anywhere;
+  color: var(--gold) !important;
+  font-family: var(--font-serif) !important;
+  font-size: clamp(1.65rem, 3vw, 2.75rem) !important;
+  line-height: 1.05 !important;
+  font-weight: 900 !important;
+  letter-spacing: -.025em !important;
+  text-transform: none !important;
+}
+
+body.is-personalized-site #heroTitle {
+  max-width: 17ch !important;
+  font-size: clamp(3.35rem, 6vw, 5.75rem) !important;
+  line-height: .97 !important;
+}
+
+@media (max-width: 680px) {
+  body.is-personalized-site .hero__personalization {
+    margin-bottom: 24px !important;
+  }
+
+  body.is-personalized-site .hero__company-name:not([hidden]) {
+    max-width: 100% !important;
+    font-size: clamp(1.45rem, 7.8vw, 2.2rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  body.is-personalized-site #heroTitle {
+    max-width: 100% !important;
+    font-size: clamp(2.65rem, 11.5vw, 3.8rem) !important;
+    line-height: .98 !important;
+  }
+
+  body.is-personalized-site .hero__note {
+    display: block !important;
+    margin-top: 17px !important;
+    font-size: .88rem !important;
+    line-height: 1.45 !important;
+  }
+}
+/* PERSONALIZED HERO IDENTITY — END */
+
+/* PERSONALIZED HERO FIXED TITLE LINES — START */
+body.is-personalized-site #heroTitle {
+  max-width: none !important;
+  font-size: clamp(3.35rem, 6vw, 5.75rem) !important;
+  line-height: 1.03 !important;
+}
+
+body.is-personalized-site #heroTitle .hero-title-line {
+  display: block !important;
+  white-space: nowrap !important;
+  color: inherit !important;
+}
+
+body.is-personalized-site #heroTitle .hero-title-line:nth-child(3) {
+  margin-top: .13em !important;
+}
+
+@media (max-width: 680px) {
+  body.is-personalized-site #heroTitle {
+    max-width: 100% !important;
+    font-size: clamp(1.9rem, 8.7vw, 2.4rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -.035em !important;
+  }
+}
+/* PERSONALIZED HERO FIXED TITLE LINES — END */
+
+/* PERSONALIZED HERO ASIDE AND NO LEAD — START */
+body.is-personalized-site #heroTitle .hero-title-line--aside {
+  font-weight: 400 !important;
+  font-style: italic !important;
+}
+
+body.is-personalized-site #heroLead {
+  display: none !important;
+}
+/* PERSONALIZED HERO ASIDE AND NO LEAD — END */
+
+/* PERSONALIZED HERO MOBILE RHYTHM — START */
+@media (max-width: 680px) {
+  body.is-personalized-site .hero__layout {
+    margin-top: 82px !important;
+  }
+
+  body.is-personalized-site .hero__personalization {
+    margin-bottom: 40px !important;
+  }
+
+  body.is-personalized-site .hero__personalization-label {
+    margin-bottom: 5px !important;
+    font-size: .8rem !important;
+    line-height: 1.3 !important;
+  }
+
+  body.is-personalized-site .hero__company-name:not([hidden]) {
+    font-size: clamp(1.35rem, 7vw, 1.95rem) !important;
+    line-height: 1.06 !important;
+  }
+
+  body.is-personalized-site #heroTitle {
+    font-size: clamp(1.75rem, 9vw, 2.5rem) !important;
+    line-height: 1 !important;
+  }
+
+  body.is-personalized-site #heroTitle .hero-title-line + .hero-title-line {
+    margin-top: .045em !important;
+  }
+
+  body.is-personalized-site #heroTitle .hero-title-line:nth-child(3) {
+    margin-top: .17em !important;
+  }
+
+  body.is-personalized-site .hero__actions {
+    margin-top: 75px !important;
+  }
+
+  body.is-personalized-site .hero__note {
+    margin-top: 15px !important;
+  }
+}
+/* PERSONALIZED HERO MOBILE RHYTHM — END */
+
+/* PERSONALIZED MOBILE BAR VISIBILITY — START */
+@media (max-width: 680px) {
+  body.is-personalized-site .mobile-bar {
+    transition:
+      transform .22s ease,
+      opacity .22s ease !important;
+  }
+
+  body.is-personalized-site:not(.has-mobile-scroll) .mobile-bar,
+  body.is-personalized-site.is-in-offer-flow .mobile-bar {
+    transform: translateY(115%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  body.is-personalized-site.has-mobile-scroll:not(.is-in-offer-flow) .mobile-bar {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
+/* PERSONALIZED MOBILE BAR VISIBILITY — END */
+
+/* PERSONALIZED HERO DESKTOP RHYTHM — START */
+@media (min-width: 681px) {
+  body.is-personalized-site .hero__personalization {
+    margin-bottom: 48px !important;
+  }
+
+  body.is-personalized-site #heroTitle {
+    font-size: clamp(3.55rem, 6.35vw, 5.95rem) !important;
+    line-height: 1.07 !important;
+  }
+
+  body.is-personalized-site #heroTitle .hero-title-line:nth-child(3) {
+    margin-top: .24em !important;
+  }
+
+  body.is-personalized-site .hero__actions {
+    margin-top: 48px !important;
+  }
+}
+/* PERSONALIZED HERO DESKTOP RHYTHM — END */
+
+/* STANDARD SITE MOBILE HERO — START */
+@media (max-width: 680px) {
+  body.is-standard-site .hero {
+    padding-bottom: 72px !important;
+  }
+
+  body.is-standard-site .hero__layout {
+    margin-top: 68px !important;
+  }
+
+  body.is-standard-site .hero__eyebrow {
+    margin-bottom: 22px !important;
+  }
+
+  body.is-standard-site #heroTitle {
+    font-size: clamp(2.55rem, 13vw, 3.45rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.04em !important;
+  }
+
+  body.is-standard-site .hero__lead {
+    margin-top: 26px !important;
+    max-width: none !important;
+    font-size: .9rem !important;
+    line-height: 1.52 !important;
+  }
+
+  body.is-standard-site .hero__actions {
+    margin-top: 42px !important;
+  }
+
+  body.is-standard-site .mobile-bar {
+    transition:
+      transform .22s ease,
+      opacity .22s ease !important;
+  }
+
+  body.is-standard-site:not(.has-mobile-scroll) .mobile-bar,
+  body.is-standard-site.is-in-offer-flow .mobile-bar {
+    transform: translateY(115%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  body.is-standard-site.has-mobile-scroll:not(.is-in-offer-flow) .mobile-bar {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
+
+@media (max-width: 390px) {
+  body.is-standard-site #heroTitle {
+    font-size: clamp(2.45rem, 12.6vw, 3rem) !important;
+  }
+}
+/* STANDARD SITE MOBILE HERO — END */

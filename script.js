@@ -28,27 +28,47 @@ function getCompanyNameFromPath() {
 
 function applyPersonalizedEyebrow() {
   const companyName = getCompanyNameFromPath();
-  const eyebrow = document.getElementById("offerEyebrow");
+  const personalization = document.getElementById("offerEyebrow");
+  const eyebrowLabel = document.getElementById("offerEyebrowLabel");
+  const companyNameElement = document.getElementById("offerCompanyName");
   const heroTitle = document.getElementById("heroTitle");
   const heroLead = document.getElementById("heroLead");
+  const heroNote = document.getElementById("heroNote");
 
-  if (!eyebrow) return;
+  if (!personalization || !eyebrowLabel || !companyNameElement) return;
 
   if (companyName) {
     document.body.classList.add("is-personalized-site");
-    eyebrow.textContent = `Oferta dla firmy: ${companyName}`;
+    eyebrowLabel.textContent = "Oferta przygotowana dla firmy";
+    companyNameElement.textContent = companyName;
+    companyNameElement.title = companyName;
+    companyNameElement.hidden = false;
+
     if (heroTitle) {
-      heroTitle.textContent = "Kompleksowa obsługa księgowa od 120 zł/msc";
+      heroTitle.innerHTML = '<span class="hero-title-line">Zobacz, jak dobra</span><span class="hero-title-line hero-title-line--aside">(a przy tym niedroga)</span><span class="hero-title-line">może być księgowość</span><span class="hero-title-line">dla Twojej firmy.</span>';
     }
+
     if (heroLead) {
-      heroLead.textContent = "Poniżej wycenisz koszt miesięcznej obsługi i sprawdzisz treść umowy.";
+      heroLead.hidden = true;
     }
+
+    if (heroNote) {
+      heroNote.textContent = "Ceny brutto. Jasna umowa bez ukrytych warunków.";
+    }
+
     document.title = `Oferta dla firmy: ${companyName} — Firmus`;
     return;
   }
 
   document.body.classList.add("is-standard-site");
-  eyebrow.textContent = "Myślisz o zmianie księgowości?";
+  eyebrowLabel.textContent = "Myślisz o zmianie księgowości?";
+  companyNameElement.textContent = "";
+  companyNameElement.removeAttribute("title");
+  companyNameElement.hidden = true;
+
+  if (heroLead) {
+    heroLead.hidden = false;
+  }
 }
 
 const pricingConfig = {
@@ -180,9 +200,30 @@ function initReveal() {
   items.forEach((item) => observer.observe(item));
 }
 
+function initPersonalizedMobileBarVisibility() {
+  const mobileBar = document.querySelector(".mobile-bar");
+
+  if (!mobileBar) return;
+
+  const updateMobileBarVisibility = () => {
+    document.body.classList.toggle(
+      "has-mobile-scroll",
+      window.scrollY > 24
+    );
+  };
+
+  updateMobileBarVisibility();
+  window.addEventListener(
+    "scroll",
+    updateMobileBarVisibility,
+    { passive: true }
+  );
+}
+
 applyPersonalizedEyebrow();
 initStickyTopbar();
 initCalculator();
+initPersonalizedMobileBarVisibility();
 initReveal();
 
 
