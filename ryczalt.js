@@ -85,7 +85,7 @@
         </div>
 
         <div class="ryczalt-why">
-          <strong>A jeśli przekroczę 10 dokumentów miesięcznie?</strong> Rozmawiamy, ustalamy nową cenę i działamy dalej
+          <strong>A jeśli przekroczę 10 dokumentów miesięcznie?</strong> Rozmawiamy, dopasowujemy cenę do nowej sytuacji i działamy dalej.
         </div>
       </div>
     </section>
@@ -207,7 +207,7 @@
             <p class="ryczalt-step__lead">Potrzebuję ich, żeby pokazać Ci właściwe warunki i tekst umowy.</p>
             <div class="ryczalt-form-grid">
               <label class="ryczalt-field">Imię / nazwa firmy<input type="text" name="imie_nazwa" id="ryczaltName" required autocomplete="name" /></label>
-              <label class="ryczalt-field">NIP <span id="ryczaltNipHint"></span><input type="text" name="nip" id="ryczaltNip" inputmode="numeric" autocomplete="off" /></label>
+              <label class="ryczalt-field"><span>NIP <span id="ryczaltNipHint"></span></span><input type="text" name="nip" id="ryczaltNip" inputmode="numeric" autocomplete="off" /></label>
               <label class="ryczalt-field">E-mail<input type="email" name="email" id="ryczaltEmail" required autocomplete="email" /></label>
               <label class="ryczalt-field">Telefon<input type="tel" name="telefon" id="ryczaltPhone" required autocomplete="tel" /></label>
             </div>
