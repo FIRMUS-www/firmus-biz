@@ -27,9 +27,9 @@
     const nav = topbar.querySelector(".topbar__nav");
     if (nav) {
       nav.innerHTML = `
-        <a href="#ryczalt-warunki">Warunki</a>
-        <a href="#ryczalt-opinie">Opinie</a>
-        <a href="#ryczalt-start">Sprawdź ofertę</a>
+        <a href="#ryczalt" data-scroll-target="ryczalt-warunki">Warunki</a>
+        <a href="#ryczalt" data-scroll-target="ryczalt-opinie">Opinie</a>
+        <a href="#ryczalt" data-scroll-target="ryczalt-start">Sprawdź ofertę</a>
         <a class="topbar__phone" href="tel:+48727791155">Zadzwoń / WhatsApp</a>
       `;
     }
@@ -38,7 +38,8 @@
   if (mobileBar) {
     const links = mobileBar.querySelectorAll("a");
     if (links[0]) {
-      links[0].href = "#ryczalt-start";
+      links[0].href = "#ryczalt";
+      links[0].dataset.scrollTarget = "ryczalt-start";
       links[0].textContent = "Sprawdź ofertę";
     }
   }
@@ -56,8 +57,8 @@
             <strong>Przez cały pierwszy rok.</strong> Księgowość online, faktury, KSeF, podatki i Twój księgowy w jednej appce.
           </p>
           <div class="ryczalt-hero__actions">
-            <a class="btn btn-primary" href="#ryczalt-start" data-ryczalt-scenario="change">PRZENOSZĘ KSIĘGOWOŚĆ</a>
-            <a class="btn btn-ghost" href="#ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
+            <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="change">PRZENOSZĘ KSIĘGOWOŚĆ</a>
+            <a class="btn btn-ghost" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
           </div>
           <p class="ryczalt-hero__micro">
             660 zł brutto za 12 miesięcy, płatne z góry. Oferta dla JDG na ryczałcie do 10 dokumentów sprzedażowych miesięcznie — z VAT albo bez VAT. Umowę trzeba podpisać i opłacić do 30.09.2026.
@@ -122,14 +123,14 @@
             <span class="ryczalt-path__num">01</span>
             <h3>Mam firmę. Chcę zmienić księgowość.</h3>
             <p>Nie musisz sam ogarniać przenosin. Pomagam przejść przez formalności i kontaktuję się z poprzednim biurem rachunkowym. Współpracę prowadzimy całkowicie online.</p>
-            <a class="btn btn-primary" href="#ryczalt-start" data-ryczalt-scenario="change">PRZENOSZĘ KSIĘGOWOŚĆ</a>
+            <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="change">PRZENOSZĘ KSIĘGOWOŚĆ</a>
           </article>
 
           <article class="ryczalt-path">
             <span class="ryczalt-path__num">02</span>
             <h3>Dopiero zakładam firmę.</h3>
             <p>Pomagałem już wielu osobom założyć JDG całkowicie zdalnie. Przechodzimy razem przez start firmy, rozliczenia i formalności, a od początku masz księgowość i aplikację Firmus.</p>
-            <a class="btn btn-primary" href="#ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
+            <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
           </article>
         </div>
       </div>
@@ -274,6 +275,17 @@
   } else {
     document.body.appendChild(campaign);
   }
+
+  document.querySelectorAll("[data-scroll-target]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const target = document.getElementById(link.dataset.scrollTarget);
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (window.location.hash !== "#ryczalt") {
+        window.history.replaceState(null, "", `${window.location.pathname}#ryczalt`);
+      }
+    });
+  });
 
   const state = {
     scenario: "",
