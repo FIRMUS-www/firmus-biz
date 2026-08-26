@@ -285,14 +285,14 @@ function initRyczaltCampaignLoader() {
   if (!document.querySelector('link[data-ryczalt-styles]')) {
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/ryczalt.css?v=20260826-2";
+    link.href = "/ryczalt.css?v=20260826-3";
     link.dataset.ryczaltStyles = "true";
     document.head.appendChild(link);
   }
 
   if (!document.querySelector('script[data-ryczalt-script]')) {
     const script = document.createElement("script");
-    script.src = "/ryczalt.js?v=20260826-2";
+    script.src = "/ryczalt.js?v=20260826-3";
     script.defer = true;
     script.dataset.ryczaltScript = "true";
     document.head.appendChild(script);

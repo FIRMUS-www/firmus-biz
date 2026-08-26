@@ -65,11 +65,6 @@
           </p>
         </div>
 
-        <aside class="ryczalt-price-card" aria-label="Warunki promocji">
-          <span class="ryczalt-price-card__label">Pierwszy rok księgowości</span>
-          <strong class="ryczalt-price-card__price">55 <small>zł / mies.</small></strong>
-          <p class="ryczalt-price-card__year"><strong>660 zł brutto</strong> za 12 miesięcy, płatne z góry.</p>
-        </aside>
       </div>
     </section>
 
@@ -77,12 +72,12 @@
       <div class="container">
         <div class="ryczalt-section-head">
           <p class="eyebrow">Tak. Naprawdę 55 zł.</p>
-          <h2>To nie jest „od” 55 zł. To 55 zł / miesiąc przez rok.</h2>
+          <h2>To nie jest „od” 55 zł</h2>
           <p>Zamiast niejasnych, skomplikowanych warunków dostajesz prostą cenę i konkretny termin.</p>
         </div>
 
-        <div class="ryczalt-condition">
-          Jeśli wystawiasz do 10 dokumentów sprzedaży w miesiącu i podpiszemy umowę do <strong>30.09.2026</strong>, zapłacisz <strong>660 zł</strong> za rok księgowości.
+        <div class="ryczalt-why">
+          A jeśli w trakcie roku przekroczysz 10 dokumentów sprzedaży? Nic nie dzieje się automatycznie. Nie przerywamy obsługi — skontaktujemy się z Tobą i ustalimy dalszy zakres oraz cenę przed kolejnym rozliczeniem.
         </div>
 
         <div class="ryczalt-why">
@@ -128,11 +123,6 @@
           <p>Podpisujesz umowę, opłacasz 660 zł i zaczynamy współpracę. Jeśli w ciągu 30 dni od podpisania umowy uznasz, że Firmus Ci nie odpowiada — rezygnujesz, a my zwracamy Ci całe 660 zł.</p>
           <p>Bez kary. Bez potrącania „pierwszego miesiąca”. Bez zobowiązania na pozostałą część roku.</p>
         </div>
-        <aside class="ryczalt-guarantee__stamp">
-          <span class="ryczalt-guarantee__label">30 dni na decyzję</span>
-          <strong>Testuj <em>BEZ RYZYKA</em></strong>
-          <span>Jeśli zrezygnujesz w ciągu 30 dni od podpisania umowy, zwrócimy pełne <b>660 zł</b>.</span>
-        </aside>
       </div>
     </section>
 
@@ -156,9 +146,9 @@
     <section class="section ryczalt-start" id="ryczalt-start">
       <div class="container">
         <div class="ryczalt-start__intro">
-          <p class="eyebrow">Tylko do 30 września</p>
+          <p class="eyebrow">Prosta umowa</p>
           <h2>Sprawdź warunki umowy</h2>
-          <p>To zajmie kilkadziesiąt sekund. Jeśli masz więcej niż 10 dokumentów, też Cię nie odrzucimy — dobierzemy właściwy wariant obsługi.</p>
+          <p>Wypełnisz w 2 minuty - tylko podstawowe informacje</p>
         </div>
 
         <form class="ryczalt-wizard" name="firmus-umowa" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" id="ryczaltForm">
@@ -223,7 +213,7 @@
             </div>
             <div class="ryczalt-wizard__actions">
               <button class="btn btn-ghost" type="button" data-prev>Wstecz</button>
-              <button class="btn btn-primary" type="button" data-check>SPRAWDŹ, CZY ŁAPIĘ SIĘ NA OFERTĘ</button>
+              <button class="btn btn-primary" type="button" data-check>CHCĘ WZÓR UMOWY</button>
             </div>
           </div>
 
