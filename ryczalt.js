@@ -61,15 +61,14 @@
             <a class="btn btn-ghost" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
           </div>
           <p class="ryczalt-hero__micro">
-            660 zł brutto za 12 miesięcy, płatne z góry. Oferta dla JDG na ryczałcie do 10 dokumentów sprzedażowych miesięcznie — z VAT albo bez VAT. Umowę trzeba podpisać i opłacić do 30.09.2026.
+            660 zł brutto za 12 miesięcy. Oferta dla JDG na ryczałcie do 10 dokumentów sprzedażowych miesięcznie (z VAT albo bez VAT). Tylko do 30.09.2026. - płatne z góry.
           </p>
         </div>
 
         <aside class="ryczalt-price-card" aria-label="Warunki promocji">
           <span class="ryczalt-price-card__label">Pierwszy rok księgowości</span>
           <strong class="ryczalt-price-card__price">55 <small>zł / mies.</small></strong>
-          <p class="ryczalt-price-card__year"><strong>660 zł brutto</strong> za pełne 12 miesięcy, płatne z góry.</p>
-          <p class="ryczalt-price-card__guarantee"><strong>30 dni gwarancji.</strong> Rezygnujesz w ciągu 30 dni od podpisania umowy? Zwracamy całe 660 zł.</p>
+          <p class="ryczalt-price-card__year"><strong>660 zł brutto</strong> za 12 miesięcy, płatne z góry.</p>
         </aside>
       </div>
     </section>
@@ -78,35 +77,20 @@
       <div class="container">
         <div class="ryczalt-section-head">
           <p class="eyebrow">Tak. Naprawdę 55 zł.</p>
-          <h2>To nie jest „od 55 zł”. To pełny pierwszy rok.</h2>
-          <p>Nie chowamy warunków na końcu strony. Ta cena jest realna, bo oferta ma bardzo konkretne zasady i krótki termin wejścia.</p>
+          <h2>To nie jest „od” 55 zł. To 55 zł / miesiąc przez rok.</h2>
+          <p>Zamiast niejasnych, skomplikowanych warunków dostajesz prostą cenę i konkretny termin.</p>
         </div>
 
-        <div class="ryczalt-facts">
-          <article class="ryczalt-fact">
-            <strong>12 miesięcy</strong>
-            <p>55 zł miesięcznie przez cały pierwszy rok współpracy.</p>
-          </article>
-          <article class="ryczalt-fact">
-            <strong>660 zł z góry</strong>
-            <p>Jedna płatność za pełne 12 miesięcy obsługi.</p>
-          </article>
-          <article class="ryczalt-fact">
-            <strong>Do 10 dokumentów</strong>
-            <p>Dokumentów sprzedażowych miesięcznie. VAT albo bez VAT.</p>
-          </article>
-          <article class="ryczalt-fact">
-            <strong>Do 30.09.2026</strong>
-            <p>Do tego dnia trzeba podpisać umowę i opłacić 660 zł.</p>
-          </article>
+        <div class="ryczalt-condition">
+          Jeśli wystawiasz do 10 dokumentów sprzedaży w miesiącu i podpiszemy umowę do <strong>30.09.2026</strong>, zapłacisz <strong>660 zł</strong> za rok księgowości.
         </div>
 
         <div class="ryczalt-why">
-          <strong>Skąd taka cena?</strong> Rozwijamy Firmus właśnie pod prostą, wygodną obsługę małych firm i mocno zwiększamy grupę klientów na ryczałcie. Dlatego na start dajemy warunki, których nie ma w normalnym cenniku. To nie jest nowy cennik Firmusa — to jednorazowa oferta dla tych, którzy zdecydują się wejść teraz.
+          <strong>Skąd taka cena?</strong> To jednorazowa oferta na start. Rozwijamy Firmus i aplikację oraz powiększamy grupę klientów na ryczałcie.
         </div>
 
         <div class="ryczalt-why">
-          <strong>A po pierwszym roku?</strong> Znasz to przed podpisaniem umowy. Przy maksymalnie 10 dokumentach dzisiejsza standardowa cena Firmusa to 120 zł miesięcznie bez VAT albo 180 zł miesięcznie z VAT.
+          <strong>A po pierwszym roku?</strong> Zanim pierwszy rok się skończy, otrzymasz ofertę dla stałego klienta. Poznasz warunki przed decyzją o dalszej współpracy.
         </div>
       </div>
     </section>
@@ -121,15 +105,15 @@
         <div class="ryczalt-paths__grid">
           <article class="ryczalt-path">
             <span class="ryczalt-path__num">01</span>
-            <h3>Mam firmę. Chcę zmienić księgowość.</h3>
-            <p>Nie musisz sam ogarniać przenosin. Pomagam przejść przez formalności i kontaktuję się z poprzednim biurem rachunkowym. Współpracę prowadzimy całkowicie online.</p>
+            <h3>Jeśli już masz firmę</h3>
+            <p>Nie musisz sam ogarniać przenosin. Pomagam przejść przez formalności i kontaktuję się z poprzednim biurem rachunkowym.</p>
             <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="change">PRZENOSZĘ KSIĘGOWOŚĆ</a>
           </article>
 
           <article class="ryczalt-path">
             <span class="ryczalt-path__num">02</span>
-            <h3>Dopiero zakładam firmę.</h3>
-            <p>Pomagałem już wielu osobom założyć JDG całkowicie zdalnie. Przechodzimy razem przez start firmy, rozliczenia i formalności, a od początku masz księgowość i aplikację Firmus.</p>
+            <h3>Gdy zakładasz firmę</h3>
+            <p>Pomożemy Ci założyć firmę oraz dopełnić wszystkich niezbędnych formalności w urzędach.</p>
             <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
           </article>
         </div>
@@ -139,14 +123,15 @@
     <section class="section section-dark ryczalt-guarantee">
       <div class="container ryczalt-guarantee__grid">
         <div class="ryczalt-guarantee__copy">
-          <p class="eyebrow">Bez kota w worku</p>
+          <p class="eyebrow">Bez ryzyka</p>
           <h2>Masz <span>30 dni</span>, żeby sprawdzić Firmus bez ryzyka.</h2>
           <p>Podpisujesz umowę, opłacasz 660 zł i zaczynamy współpracę. Jeśli w ciągu 30 dni od podpisania umowy uznasz, że Firmus Ci nie odpowiada — rezygnujesz, a my zwracamy Ci całe 660 zł.</p>
           <p>Bez kary. Bez potrącania „pierwszego miesiąca”. Bez zobowiązania na pozostałą część roku.</p>
         </div>
         <aside class="ryczalt-guarantee__stamp">
-          <strong>30 dni</strong>
-          <span>Pełny zwrot 660 zł przy rezygnacji w ciągu 30 dni od podpisania umowy.</span>
+          <span class="ryczalt-guarantee__label">30 dni na decyzję</span>
+          <strong>Testuj <em>BEZ RYZYKA</em></strong>
+          <span>Jeśli zrezygnujesz w ciągu 30 dni od podpisania umowy, zwrócimy pełne <b>660 zł</b>.</span>
         </aside>
       </div>
     </section>
@@ -155,7 +140,7 @@
       <div class="container">
         <div class="ryczalt-section-head">
           <p class="eyebrow">Opinie klientów</p>
-          <h2>Nie musisz wierzyć reklamie.</h2>
+          <h2>Nie wierz nam na słowo</h2>
           <p>To są prawdziwe opinie klientów Firmusa — dokładnie o kontakcie, zakładaniu firmy, formalnościach i pomocy w codziennych sprawach.</p>
         </div>
 
@@ -172,7 +157,7 @@
       <div class="container">
         <div class="ryczalt-start__intro">
           <p class="eyebrow">Tylko do 30 września</p>
-          <h2>Sprawdź, czy możesz wejść w 55 zł.</h2>
+          <h2>Sprawdź warunki umowy</h2>
           <p>To zajmie kilkadziesiąt sekund. Jeśli masz więcej niż 10 dokumentów, też Cię nie odrzucimy — dobierzemy właściwy wariant obsługi.</p>
         </div>
 
