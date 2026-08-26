@@ -1,0 +1,703 @@
+/* Firmus RYCZAŁT campaign — scoped to body.is-ryczalt-site */
+body.is-ryczalt-site {
+  background: var(--bg);
+}
+
+body.is-ryczalt-site #main,
+body.is-ryczalt-site > footer {
+  display: none !important;
+}
+
+body.is-ryczalt-site .topbar {
+  background: rgba(251, 246, 238, .96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+
+.ryczalt-main {
+  overflow: hidden;
+}
+
+.ryczalt-main .section {
+  position: relative;
+}
+
+.ryczalt-hero {
+  min-height: 94svh;
+  padding: 150px 0 96px;
+  display: flex;
+  align-items: center;
+}
+
+.ryczalt-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr);
+  gap: 72px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ryczalt-kicker,
+.ryczalt-deadline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 28px;
+  padding: 9px 14px;
+  border: 1px solid rgba(215, 176, 95, .42);
+  border-radius: 999px;
+  color: var(--gold) !important;
+  font-size: .82rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.ryczalt-hero h1 {
+  max-width: 10.5ch;
+  margin: 0;
+  color: var(--cream-text) !important;
+  font-family: var(--font-serif);
+  font-size: clamp(3.7rem, 7vw, 7rem);
+  line-height: .92;
+  letter-spacing: -.045em;
+}
+
+.ryczalt-hero h1 span {
+  color: var(--gold) !important;
+}
+
+.ryczalt-hero__lead {
+  max-width: 610px;
+  margin: 30px 0 0;
+  color: var(--cream-muted) !important;
+  font-size: clamp(1.08rem, 1.5vw, 1.28rem);
+  line-height: 1.55;
+}
+
+.ryczalt-hero__lead strong {
+  color: var(--cream-text) !important;
+}
+
+.ryczalt-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.ryczalt-hero__micro {
+  max-width: 620px;
+  margin: 18px 0 0;
+  color: rgba(238, 230, 216, .62) !important;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.ryczalt-price-card {
+  position: relative;
+  padding: 42px 38px;
+  border: 1px solid rgba(215, 176, 95, .32);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 247, .07);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, .16);
+}
+
+.ryczalt-price-card::after {
+  content: "tylko do 30.09";
+  position: absolute;
+  right: -20px;
+  top: 28px;
+  transform: rotate(4deg);
+  padding: 8px 13px;
+  background: var(--rust);
+  color: #fff;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 900;
+  font-size: .95rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .15);
+}
+
+.ryczalt-price-card__label {
+  display: block;
+  color: var(--cream-muted) !important;
+  font-size: .94rem;
+}
+
+.ryczalt-price-card__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin: 10px 0 4px;
+  color: var(--gold) !important;
+  font-family: var(--font-serif);
+  font-size: clamp(5rem, 9vw, 7.8rem);
+  line-height: .82;
+  letter-spacing: -.055em;
+}
+
+.ryczalt-price-card__price small {
+  padding-bottom: 10px;
+  color: var(--cream-text) !important;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.ryczalt-price-card__year {
+  margin: 24px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--line-dark);
+  color: var(--cream-text) !important;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.ryczalt-price-card__year strong {
+  color: var(--gold) !important;
+}
+
+.ryczalt-price-card__guarantee {
+  margin: 20px 0 0;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(215, 176, 95, .11);
+  color: var(--cream-text) !important;
+  font-size: .93rem;
+  line-height: 1.45;
+}
+
+.ryczalt-section-head {
+  max-width: 760px;
+  margin-bottom: 54px;
+}
+
+.ryczalt-section-head .eyebrow {
+  margin-bottom: 16px;
+}
+
+.ryczalt-section-head h2,
+.ryczalt-guarantee h2,
+.ryczalt-start h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 4.7rem);
+  line-height: .98;
+  letter-spacing: -.035em;
+}
+
+.ryczalt-section-head > p:last-child {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.ryczalt-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ryczalt-fact,
+.ryczalt-path,
+.ryczalt-testimonial,
+.ryczalt-wizard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.ryczalt-fact {
+  padding: 28px 24px;
+}
+
+.ryczalt-fact strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--forest);
+  font-size: 1.05rem;
+}
+
+.ryczalt-fact p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.55;
+}
+
+.ryczalt-why {
+  margin-top: 28px;
+  padding: 24px 26px;
+  border-left: 4px solid var(--gold);
+  background: var(--bg-soft);
+  color: var(--ink);
+}
+
+.ryczalt-why strong {
+  color: var(--forest);
+}
+
+.ryczalt-paths {
+  background: var(--bg-soft);
+}
+
+.ryczalt-paths__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.ryczalt-path {
+  padding: 38px 34px;
+}
+
+.ryczalt-path__num {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 999px;
+  background: var(--forest);
+  color: var(--cream-text);
+  font-weight: 800;
+}
+
+.ryczalt-path h3 {
+  margin: 0 0 14px;
+  color: var(--forest);
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.65rem);
+  line-height: 1.05;
+}
+
+.ryczalt-path p {
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+.ryczalt-guarantee {
+  padding: 108px 0;
+}
+
+.ryczalt-guarantee__grid {
+  display: grid;
+  grid-template-columns: 1fr .9fr;
+  gap: 70px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ryczalt-guarantee h2 {
+  color: var(--cream-text) !important;
+}
+
+.ryczalt-guarantee h2 span {
+  color: var(--gold) !important;
+}
+
+.ryczalt-guarantee__copy > p {
+  max-width: 670px;
+  margin: 25px 0 0;
+  color: var(--cream-muted) !important;
+  font-size: 1.1rem;
+}
+
+.ryczalt-guarantee__stamp {
+  padding: 34px;
+  border: 1px solid rgba(215, 176, 95, .36);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 247, .06);
+}
+
+.ryczalt-guarantee__stamp strong {
+  display: block;
+  color: var(--gold) !important;
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  line-height: .9;
+}
+
+.ryczalt-guarantee__stamp span {
+  display: block;
+  margin-top: 14px;
+  color: var(--cream-text) !important;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.ryczalt-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ryczalt-testimonial {
+  padding: 30px;
+}
+
+.ryczalt-testimonial blockquote {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.ryczalt-testimonial p {
+  margin: 20px 0 0;
+  color: var(--forest);
+  font-weight: 800;
+}
+
+.ryczalt-start {
+  background: var(--bg-soft);
+}
+
+.ryczalt-start__intro {
+  max-width: 780px;
+  margin-bottom: 42px;
+}
+
+.ryczalt-start__intro > p:last-child {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.ryczalt-wizard {
+  max-width: 860px;
+  padding: 38px;
+}
+
+.ryczalt-progress {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 34px;
+}
+
+.ryczalt-progress span {
+  height: 5px;
+  flex: 1;
+  border-radius: 999px;
+  background: rgba(45, 42, 36, .1);
+}
+
+.ryczalt-progress span.is-active {
+  background: var(--rust);
+}
+
+.ryczalt-step[hidden] {
+  display: none !important;
+}
+
+.ryczalt-step h3 {
+  margin: 0 0 10px;
+  color: var(--forest);
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.ryczalt-step__lead {
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+.ryczalt-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ryczalt-choice {
+  width: 100%;
+  min-height: 74px;
+  padding: 16px 18px;
+  border: 1px solid rgba(45, 42, 36, .16);
+  border-radius: 18px;
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color .15s ease, transform .15s ease, background .15s ease;
+}
+
+.ryczalt-choice:hover,
+.ryczalt-choice:focus-visible {
+  border-color: var(--rust);
+  transform: translateY(-1px);
+}
+
+.ryczalt-choice.is-selected {
+  border-color: var(--forest);
+  background: rgba(31, 59, 42, .07);
+  color: var(--forest);
+}
+
+.ryczalt-choice-group + .ryczalt-choice-group {
+  margin-top: 26px;
+}
+
+.ryczalt-choice-group legend {
+  margin-bottom: 12px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.ryczalt-wizard__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.ryczalt-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ryczalt-field {
+  display: grid;
+  gap: 7px;
+  color: var(--ink);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.ryczalt-field input {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 14px;
+  border: 1px solid rgba(45, 42, 36, .18);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.ryczalt-field input:focus {
+  outline: 3px solid rgba(215, 176, 95, .25);
+  border-color: var(--forest);
+}
+
+.ryczalt-result {
+  padding: 26px;
+  border-radius: 20px;
+  background: rgba(31, 59, 42, .07);
+}
+
+.ryczalt-result--wide {
+  background: rgba(191, 77, 42, .07);
+}
+
+.ryczalt-result h3 {
+  margin-bottom: 12px;
+}
+
+.ryczalt-result ul {
+  margin: 20px 0 0;
+  padding-left: 20px;
+}
+
+.ryczalt-result li + li {
+  margin-top: 6px;
+}
+
+.ryczalt-contract-box {
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px dashed rgba(31, 59, 42, .35);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.ryczalt-contract-box strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--forest);
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+}
+
+.ryczalt-contract-box p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.ryczalt-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
+.ryczalt-consent input {
+  margin-top: 4px;
+}
+
+.ryczalt-footer {
+  padding: 56px 0 90px;
+  background: var(--forest);
+  color: var(--cream-muted);
+}
+
+.ryczalt-footer__grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+.ryczalt-footer strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--cream-text);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+}
+
+.ryczalt-footer p {
+  margin: 0;
+}
+
+.ryczalt-footer a {
+  color: var(--cream-text);
+}
+
+@media (max-width: 860px) {
+  .ryczalt-hero {
+    min-height: auto;
+    padding: 116px 0 80px;
+  }
+
+  .ryczalt-hero__grid,
+  .ryczalt-guarantee__grid {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .ryczalt-price-card {
+    max-width: 560px;
+  }
+
+  .ryczalt-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .ryczalt-hero {
+    padding: 100px 0 64px;
+  }
+
+  .ryczalt-hero__grid {
+    gap: 38px;
+  }
+
+  .ryczalt-kicker {
+    margin-bottom: 22px;
+    font-size: .74rem;
+  }
+
+  .ryczalt-hero h1 {
+    max-width: none;
+    font-size: clamp(3rem, 14vw, 4.2rem);
+    line-height: .94;
+  }
+
+  .ryczalt-hero__lead {
+    margin-top: 24px;
+    font-size: 1rem;
+  }
+
+  .ryczalt-hero__actions {
+    display: grid;
+    margin-top: 32px;
+  }
+
+  .ryczalt-hero__actions .btn {
+    width: 100%;
+  }
+
+  .ryczalt-price-card {
+    padding: 32px 24px;
+  }
+
+  .ryczalt-price-card::after {
+    right: 14px;
+    top: -13px;
+  }
+
+  .ryczalt-price-card__price {
+    font-size: clamp(4.5rem, 22vw, 6rem);
+  }
+
+  .ryczalt-main .section,
+  .ryczalt-guarantee {
+    padding: 76px 0;
+  }
+
+  .ryczalt-section-head {
+    margin-bottom: 36px;
+  }
+
+  .ryczalt-section-head h2,
+  .ryczalt-guarantee h2,
+  .ryczalt-start h2 {
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
+  }
+
+  .ryczalt-facts,
+  .ryczalt-paths__grid,
+  .ryczalt-testimonials__grid,
+  .ryczalt-choice-grid,
+  .ryczalt-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ryczalt-path,
+  .ryczalt-testimonial,
+  .ryczalt-wizard {
+    padding: 26px 22px;
+  }
+
+  .ryczalt-choice {
+    min-height: 62px;
+  }
+
+  .ryczalt-footer__grid {
+    display: grid;
+    align-items: start;
+  }
+
+  body.is-ryczalt-site .mobile-bar {
+    transition: transform .22s ease, opacity .22s ease !important;
+  }
+
+  body.is-ryczalt-site:not(.has-mobile-scroll) .mobile-bar {
+    transform: translateY(115%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  body.is-ryczalt-site.has-mobile-scroll .mobile-bar {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
