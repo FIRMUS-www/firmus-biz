@@ -72,20 +72,20 @@
       <div class="container">
         <div class="ryczalt-section-head">
           <p class="eyebrow">Tak. Naprawdę 55 zł.</p>
-          <h2>To nie jest „od” 55 zł</h2>
-          <p>Zamiast niejasnych, skomplikowanych warunków dostajesz prostą cenę i konkretny termin.</p>
+          <h2>To nie jest „OD” 55 zł</h2>
+          <p>Zero niejasnych, skomplikowanych warunków. Prosta cena i konkretny termin.</p>
         </div>
 
         <div class="ryczalt-why">
-          A jeśli w trakcie roku przekroczysz 10 dokumentów sprzedaży? Nic nie dzieje się automatycznie. Nie przerywamy obsługi — skontaktujemy się z Tobą i ustalimy dalszy zakres oraz cenę przed kolejnym rozliczeniem.
+          <strong>Skąd taka cena?</strong> To jednorazowa oferta na start aplikacji dla firm na ryczałcie.
         </div>
 
         <div class="ryczalt-why">
-          <strong>Skąd taka cena?</strong> To jednorazowa oferta na start. Rozwijamy Firmus i aplikację oraz powiększamy grupę klientów na ryczałcie.
+          <strong>A po pierwszym roku?</strong> Dwa miesiące przed końcem umowy dostaniesz ofertę dla stałego klienta. I spokojnie podejmiesz decyzję o kontynuacji współpracy.
         </div>
 
         <div class="ryczalt-why">
-          <strong>A po pierwszym roku?</strong> Zanim pierwszy rok się skończy, otrzymasz ofertę dla stałego klienta. Poznasz warunki przed decyzją o dalszej współpracy.
+          <strong>A jeśli przekroczę 10 dokumentów miesięcznie?</strong> Rozmawiamy, ustalamy nową cenę i działamy dalej
         </div>
       </div>
     </section>
