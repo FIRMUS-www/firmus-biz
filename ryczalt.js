@@ -108,7 +108,7 @@
           <article class="ryczalt-path">
             <span class="ryczalt-path__num">02</span>
             <h3>Gdy zakładasz firmę</h3>
-            <p>Pomożemy Ci założyć firmę oraz dopełnić wszystkich niezbędnych formalności w urzędach.</p>
+            <p>Pomogę Ci założyć firmę oraz dopełnić wszystkich niezbędnych formalności w urzędach.</p>
             <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
           </article>
         </div>
@@ -120,7 +120,7 @@
         <div class="ryczalt-guarantee__copy">
           <p class="eyebrow">Bez ryzyka</p>
           <h2>Masz <span>30 dni</span>, żeby sprawdzić Firmus bez ryzyka.</h2>
-          <p>Podpisujesz umowę, opłacasz 660 zł i zaczynamy współpracę. Jeśli w ciągu 30 dni od podpisania umowy uznasz, że Firmus Ci nie odpowiada — rezygnujesz, a my zwracamy Ci całe 660 zł.</p>
+          <p>Podpisujesz umowę, opłacasz 660 zł i zaczynamy współpracę. Jeśli w ciągu 30 dni od podpisania umowy uznasz, że Firmus Ci nie odpowiada — rezygnujesz, a ja zwracam Ci całe 660 zł.</p>
           <p>Bez kary. Bez potrącania „pierwszego miesiąca”. Bez zobowiązania na pozostałą część roku.</p>
         </div>
       </div>
@@ -130,7 +130,7 @@
       <div class="container">
         <div class="ryczalt-section-head">
           <p class="eyebrow">Opinie klientów</p>
-          <h2>Nie wierz nam na słowo</h2>
+          <h2>Nie wierz mi na słowo</h2>
           <p>To są prawdziwe opinie klientów Firmusa — dokładnie o kontakcie, zakładaniu firmy, formalnościach i pomocy w codziennych sprawach.</p>
         </div>
 
@@ -373,7 +373,7 @@
           <li>umowę trzeba podpisać i opłacić do 30 września 2026,</li>
           <li>promocja obejmuje do 10 dokumentów sprzedażowych miesięcznie,</li>
           <li>VAT albo bez VAT,</li>
-          <li>jeśli zrezygnujesz w ciągu 30 dni od podpisania umowy, zwracamy całe 660 zł.</li>
+          <li>jeśli zrezygnujesz w ciągu 30 dni od podpisania umowy, zwracam całe 660 zł.</li>
         </ul>
       `;
       document.getElementById("ryczaltPrice").value = "55 zł/mies. — 660 zł brutto za 12 miesięcy";
@@ -383,7 +383,7 @@
       result.classList.add("ryczalt-result--wide");
       result.innerHTML = `
         <h3>Masz trochę więcej dokumentów — to nie problem.</h3>
-        <p>Promocja 55 zł dotyczy firm do 10 dokumentów sprzedażowych miesięcznie, ale Firmus obsługuje również większe firmy. Nie zatrzymujemy Cię na czerwonym świetle — dobierzemy właściwy zakres i pokażemy cenę przed zawarciem umowy.</p>
+        <p>Promocja 55 zł dotyczy firm do 10 dokumentów sprzedażowych miesięcznie, ale Firmus obsługuje również większe firmy. Nie zatrzymuję Cię na czerwonym świetle — dobiorę właściwy zakres i pokażę cenę przed zawarciem umowy.</p>
       `;
       document.getElementById("ryczaltPrice").value = "wycena indywidualna — powyżej 10 dokumentów";
       document.getElementById("ryczaltQualification").value = "większy zakres";
