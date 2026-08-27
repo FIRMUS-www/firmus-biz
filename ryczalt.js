@@ -193,10 +193,6 @@
                 <button class="ryczalt-choice" type="button" data-vat="nie wiem">Nie wiem / sprawdźmy</button>
               </div>
             </fieldset>
-
-            <div class="ryczalt-wizard__actions">
-              <button class="btn btn-primary" type="button" data-next disabled>Dalej</button>
-            </div>
           </div>
 
           <div class="ryczalt-step" data-step="3" hidden>
@@ -329,8 +325,7 @@
   });
 
   const updateStep2 = () => {
-    const next = form.querySelector('[data-step="2"] [data-next]');
-    next.disabled = !(state.docs && state.vat);
+    if (state.docs && state.vat) setStep(3);
   };
 
   form.querySelectorAll("[data-docs]").forEach((button) => {
@@ -350,8 +345,6 @@
       updateStep2();
     });
   });
-
-  form.querySelector('[data-step="2"] [data-next]').addEventListener("click", () => setStep(3));
 
   form.querySelectorAll("[data-prev]").forEach((button) => {
     button.addEventListener("click", () => setStep(Math.max(1, currentStep - 1)));
