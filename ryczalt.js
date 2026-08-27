@@ -217,7 +217,7 @@
             <div class="ryczalt-result" id="ryczaltResult"></div>
             <div class="ryczalt-contract-box">
               <strong>Najpierw sprawdź tekst umowy.</strong>
-              <p>Zero ukrytych opłat, haczyków i drobnych druczków. Zobaczysz warunki przed podpisaniem i dopiero wtedy decydujesz.</p>
+              <p>Zero ukrytych opłat, haczyków i drobnych druczków. Sprawdź warunki współpracy i zdecyduj czy to dla Ciebie OK.</p>
             </div>
             <p class="ryczalt-consent-note">Zgoda na kontakt w sprawie przekazania warunków umowy. <a href="/polityka-prywatnosci.html">Polityka prywatności</a>.</p>
             <label class="ryczalt-consent">
@@ -379,7 +379,7 @@
       result.classList.add("ryczalt-result--wide");
       result.innerHTML = `
         <h3>Masz trochę więcej dokumentów — to nie problem.</h3>
-        <p>Promocja 55 zł dotyczy firm do 10 dokumentów sprzedażowych miesięcznie, ale Firmus obsługuje również większe firmy. Nie zatrzymuję Cię na czerwonym świetle — dobiorę właściwy zakres i pokażę cenę przed zawarciem umowy.</p>
+        <p>Promocja 55 zł dotyczy firm do 10 dokumentów sprzedażowych miesięcznie, ale Firmus obsługuje również większe firmy. Przygotuję dla Ciebie wycenę i dołączę do wzoru umowy</p>
       `;
       document.getElementById("ryczaltPrice").value = "wycena indywidualna — powyżej 10 dokumentów";
       document.getElementById("ryczaltQualification").value = "większy zakres";
