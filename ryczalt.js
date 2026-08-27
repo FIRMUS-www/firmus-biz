@@ -247,6 +247,23 @@
     document.body.appendChild(campaign);
   }
 
+  const startSection = document.getElementById("ryczalt-start");
+  const updateMobileBarAtStart = () => {
+    if (!mobileBar || !startSection) return;
+
+    const isMobile = window.matchMedia("(max-width: 680px)").matches;
+    const reachedStart = startSection.getBoundingClientRect().top <= window.innerHeight;
+    const hideMobileBar = isMobile && reachedStart;
+
+    mobileBar.style.setProperty("transform", hideMobileBar ? "translateY(115%)" : "", "important");
+    mobileBar.style.setProperty("opacity", hideMobileBar ? "0" : "", "important");
+    mobileBar.style.setProperty("pointer-events", hideMobileBar ? "none" : "", "important");
+  };
+
+  updateMobileBarAtStart();
+  window.addEventListener("scroll", updateMobileBarAtStart, { passive: true });
+  window.addEventListener("resize", updateMobileBarAtStart);
+
   document.querySelectorAll("[data-scroll-target]").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
