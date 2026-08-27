@@ -71,7 +71,7 @@
         <div class="ryczalt-section-head">
           <p class="eyebrow">Tak. Naprawdę 55 zł.</p>
           <h2>Tu nie ma haczyka</h2>
-          <p>Jasne i proste warunki: decydujesz się przed 30.09.2026 r. i księgowość kosztuje Cię od 55 zł na miesiąc (660 zł za rok z góry).</p>
+          <p>Jasne i proste warunki: decydujesz się przed 30.09.2026 r. i księgowość kosztuje Cię od 55 zł na miesiąc (660 zł za rok z góry). Masz 30 dni na sprawdzenie - jeśli w tym czasie zrezygnujesz 660 zł wraca do Ciebie.</p>
         </div>
 
         <div class="ryczalt-why">
