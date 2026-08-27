@@ -53,16 +53,15 @@
         <div>
           <p class="ryczalt-kicker">tylko do 30 września 2026</p>
           <h1>Księgowość na ryczałcie od <span>55 zł</span> miesięcznie</h1>
-          <p class="ryczalt-hero__lead">Księgowość online, faktury, KSeF, podatki i Twój księgowy w jednej appce.<br /><strong>30 dni na testowanie z gwarancją zwrotu 100%</strong></p>
+          <p class="ryczalt-hero__lead">Księgowość online, faktury, KSeF, podatki i Twój księgowy w jednej appce.<br /><strong>660 zł brutto za 12 miesięcy, płatne z góry.</strong><br /><strong>30 dni na testowanie z gwarancją zwrotu 100%</strong></p>
           <div class="ryczalt-hero__actions">
             <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="change">MAM JUŻ FIRMĘ</a>
             <a class="btn btn-ghost" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
           </div>
           <p class="ryczalt-hero__micro">
-            660 zł brutto za 12 miesięcy. Oferta dla JDG na ryczałcie do 10 dokumentów sprzedażowych miesięcznie (z VAT albo bez VAT). Tylko do 30.09.2026. - płatne z góry.
+            Oferta dla JDG na ryczałcie do 10 dokumentów sprzedażowych miesięcznie (z VAT albo bez VAT). Tylko do 30.09.2026.
           </p>
         </div>
-
       </div>
     </section>
 
@@ -71,7 +70,7 @@
         <div class="ryczalt-section-head">
           <p class="eyebrow">Tak. Naprawdę 55 zł.</p>
           <h2>Tu nie ma haczyka</h2>
-          <p>Jasne i proste warunki: decydujesz się przed 30.09.2026 r. i księgowość kosztuje Cię od 55 zł na miesiąc (660 zł za rok z góry). Masz 30 dni na sprawdzenie - jeśli w tym czasie zrezygnujesz 660 zł wraca do Ciebie.</p>
+          <p>Jasne i proste warunki: decydujesz się przed 30.09.2026 r. i księgowość kosztuje Cię od 55 zł na miesiąc (660 zł za rok z góry).</p>
         </div>
 
         <div class="ryczalt-why">
@@ -109,6 +108,34 @@
             <p>Pomogę Ci założyć firmę oraz dopełnić wszystkich niezbędnych formalności w urzędach.</p>
             <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="ryczalt-section-head">
+          <p class="eyebrow">Appka + księgowy</p>
+          <h2>Nie wybierasz między appką a księgowym. Masz jedno i drugie.</h2>
+          <p>Firmus to nie jest tylko program do wystawiania faktur. To księgowość prowadzona przez człowieka, z wygodną appką do codziennych spraw Twojej firmy.</p>
+        </div>
+
+        <div class="ryczalt-paths__grid">
+          <article class="ryczalt-path">
+            <span class="ryczalt-path__num">01</span>
+            <h3>W appce</h3>
+            <p>Wystawiasz faktury, obsługujesz KSeF, widzisz podatki i najważniejsze informacje o swojej firmie w jednym miejscu.</p>
+          </article>
+
+          <article class="ryczalt-path">
+            <span class="ryczalt-path__num">02</span>
+            <h3>Masz księgowego</h3>
+            <p>Kiedy czegoś potrzebujesz, kontaktujesz się z księgowym, który zna Twoją firmę i może Ci pomóc. Nie zostajesz sam z programem.</p>
+          </article>
+        </div>
+
+        <div class="ryczalt-why">
+          <strong>55 zł miesięcznie w promocji.</strong> Za księgowość z appką i kontaktem z księgowym. Taki model obsługi normalnie kosztuje ponad 3× tyle.
         </div>
       </div>
     </section>
@@ -202,13 +229,13 @@
               <label class="ryczalt-field">Imię / nazwa firmy<input type="text" name="imie_nazwa" id="ryczaltName" required autocomplete="name" /></label>
               <label class="ryczalt-field"><span>NIP <span id="ryczaltNipHint"></span></span><input type="text" name="nip" id="ryczaltNip" inputmode="numeric" autocomplete="off" /></label>
               <label class="ryczalt-field">E-mail<input type="email" name="email" id="ryczaltEmail" required autocomplete="email" /></label>
-              <label class="ryczalt-field">Telefon<input type="tel" name="telefon" id="ryczaltPhone" required autocomplete="tel" /></label>
+              <label class="ryczalt-field">Telefon (opcjonalnie)<input type="tel" name="telefon" id="ryczaltPhone" autocomplete="tel" /></label>
             </div>
-            <p class="ryczalt-consent-note">Zgoda na kontakt w sprawie przekazania warunków umowy. <a href="/polityka-prywatnosci.html">Polityka prywatności</a>.</p>
             <label class="ryczalt-consent">
               <input type="checkbox" name="zgoda_umowa_kontakt" value="tak" required />
-              <span>Chcę otrzymać wzór umowy i warunki współpracy.</span>
+              <span>Zgadzam się na kontakt w sprawie przekazania warunków umowy. <a href="/polityka-prywatnosci.html">Polityka prywatności</a>.</span>
             </label>
+            <p class="ryczalt-consent-note">Najpierw zobaczysz warunki. Niczego jeszcze nie podpisujesz.</p>
             <div class="ryczalt-wizard__actions">
               <button class="btn btn-primary" type="button" data-check>CHCĘ OTRZYMAĆ WZÓR UMOWY</button>
             </div>
@@ -220,6 +247,7 @@
               <strong>Najpierw sprawdź tekst umowy.</strong>
               <p>Zero ukrytych opłat, haczyków i drobnych druczków. Sprawdź warunki współpracy i zdecyduj czy to dla Ciebie OK.</p>
             </div>
+            <p class="ryczalt-consent-note">Po wysłaniu otrzymasz wzór umowy i warunki na podany adres e-mail.</p>
             <div class="ryczalt-wizard__actions">
               <button class="btn btn-primary" type="submit" id="ryczaltSubmit">SPRAWDŹ TEKST UMOWY</button>
             </div>
@@ -354,10 +382,9 @@
     const name = document.getElementById("ryczaltName");
     const nip = document.getElementById("ryczaltNip");
     const email = document.getElementById("ryczaltEmail");
-    const phone = document.getElementById("ryczaltPhone");
     const consent = form.elements.zgoda_umowa_kontakt;
 
-    const requiredFields = [name, email, phone, consent];
+    const requiredFields = [name, email, consent];
     if (state.scenario === "change") requiredFields.push(nip);
 
     const invalid = requiredFields.find((field) => !field.checkValidity());
