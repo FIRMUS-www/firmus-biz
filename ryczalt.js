@@ -204,6 +204,11 @@
               <label class="ryczalt-field">E-mail<input type="email" name="email" id="ryczaltEmail" required autocomplete="email" /></label>
               <label class="ryczalt-field">Telefon<input type="tel" name="telefon" id="ryczaltPhone" required autocomplete="tel" /></label>
             </div>
+            <p class="ryczalt-consent-note">Zgoda na kontakt w sprawie przekazania warunków umowy. <a href="/polityka-prywatnosci.html">Polityka prywatności</a>.</p>
+            <label class="ryczalt-consent">
+              <input type="checkbox" name="zgoda_umowa_kontakt" value="tak" required />
+              <span>Chcę otrzymać wzór umowy i warunki współpracy.</span>
+            </label>
             <div class="ryczalt-wizard__actions">
               <button class="btn btn-primary" type="button" data-check>CHCĘ OTRZYMAĆ WZÓR UMOWY</button>
             </div>
@@ -215,11 +220,6 @@
               <strong>Najpierw sprawdź tekst umowy.</strong>
               <p>Zero ukrytych opłat, haczyków i drobnych druczków. Sprawdź warunki współpracy i zdecyduj czy to dla Ciebie OK.</p>
             </div>
-            <p class="ryczalt-consent-note">Zgoda na kontakt w sprawie przekazania warunków umowy. <a href="/polityka-prywatnosci.html">Polityka prywatności</a>.</p>
-            <label class="ryczalt-consent">
-              <input type="checkbox" name="zgoda_umowa_kontakt" value="tak" required />
-              <span>Chcę otrzymać wzór umowy i warunki współpracy.</span>
-            </label>
             <div class="ryczalt-wizard__actions">
               <button class="btn btn-primary" type="submit" id="ryczaltSubmit">SPRAWDŹ TEKST UMOWY</button>
             </div>
@@ -355,8 +355,9 @@
     const nip = document.getElementById("ryczaltNip");
     const email = document.getElementById("ryczaltEmail");
     const phone = document.getElementById("ryczaltPhone");
+    const consent = form.elements.zgoda_umowa_kontakt;
 
-    const requiredFields = [name, email, phone];
+    const requiredFields = [name, email, phone, consent];
     if (state.scenario === "change") requiredFields.push(nip);
 
     const invalid = requiredFields.find((field) => !field.checkValidity());
