@@ -87,55 +87,30 @@
       </div>
     </section>
 
-    <section class="section ryczalt-paths">
-      <div class="container">
-        <div class="ryczalt-section-head">
-          <p class="eyebrow">Dwie proste drogi</p>
-          <h2>Masz już firmę albo dopiero zaczynasz.</h2>
-        </div>
-
-        <div class="ryczalt-paths__grid">
-          <article class="ryczalt-path">
-            <span class="ryczalt-path__num">01</span>
-            <h3>Jeśli już masz firmę</h3>
-            <p>Nie musisz sam ogarniać przenosin. Pomagam przejść przez formalności i kontaktuję się z poprzednim biurem rachunkowym.</p>
-            <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="change">PRZENOSZĘ KSIĘGOWOŚĆ</a>
-          </article>
-
-          <article class="ryczalt-path">
-            <span class="ryczalt-path__num">02</span>
-            <h3>Gdy zakładasz firmę</h3>
-            <p>Pomogę Ci założyć firmę oraz dopełnić wszystkich niezbędnych formalności w urzędach.</p>
-            <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section">
       <div class="container">
         <div class="ryczalt-section-head">
-          <p class="eyebrow">Appka + księgowy</p>
-          <h2>Nie wybierasz między appką a księgowym. Masz jedno i drugie.</h2>
-          <p>Firmus to nie jest tylko program do wystawiania faktur. To księgowość prowadzona przez człowieka, z wygodną appką do codziennych spraw Twojej firmy.</p>
+          <p class="eyebrow">BIZ+ + księgowy</p>
+          <h2>Księgowość i księgowy w jednej appce</h2>
+          <p>BIZ+ to Twoje miejsce do codziennego ogarniania firmy. Wystawiasz faktury, obsługujesz KSeF, sprawdzasz podatki i ZUS oraz widzisz najważniejsze sprawy do załatwienia. A kiedy potrzebujesz pomocy, masz w tej samej appce kontakt z księgowym.</p>
         </div>
 
         <div class="ryczalt-paths__grid">
           <article class="ryczalt-path">
             <span class="ryczalt-path__num">01</span>
-            <h3>W appce</h3>
-            <p>Wystawiasz faktury, obsługujesz KSeF, widzisz podatki i najważniejsze informacje o swojej firmie w jednym miejscu.</p>
+            <h3>Wszystko w BIZ+</h3>
+            <p>Faktury, KSeF, podatki, ZUS i najważniejsze informacje o Twojej firmie w jednym miejscu. Bez skakania między programami, mailami i tabelkami.</p>
           </article>
 
           <article class="ryczalt-path">
             <span class="ryczalt-path__num">02</span>
-            <h3>Masz księgowego</h3>
-            <p>Kiedy czegoś potrzebujesz, kontaktujesz się z księgowym, który zna Twoją firmę i może Ci pomóc. Nie zostajesz sam z programem.</p>
+            <h3>Księgowy w tej samej appce</h3>
+            <p>Masz kontakt z księgowym, który zna Twoją firmę. Pytasz, gdy czegoś nie wiesz, a księgowość dzieje się w tle — nie zostajesz sam z programem.</p>
           </article>
         </div>
 
         <div class="ryczalt-why">
-          <strong>55 zł miesięcznie w promocji.</strong> Za księgowość z appką i kontaktem z księgowym. Taki model obsługi normalnie kosztuje ponad 3× tyle.
+          <strong>55 zł miesięcznie w promocji.</strong> Za księgowość z appką i kontaktem z księgowym.
         </div>
       </div>
     </section>
