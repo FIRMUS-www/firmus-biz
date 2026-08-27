@@ -329,6 +329,14 @@ body.is-ryczalt-site .topbar__nav .topbar__phone {
   color: var(--forest);
 }
 
+.ryczalt-choice-group {
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  border: 0;
+}
+
 .ryczalt-choice-group + .ryczalt-choice-group {
   margin-top: 26px;
 }
@@ -439,6 +447,17 @@ body.is-ryczalt-site .topbar__nav .topbar__phone {
   color: var(--muted);
   font-size: .88rem;
   line-height: 1.45;
+}
+
+.ryczalt-consent-note {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
+.ryczalt-consent-note + .ryczalt-consent {
+  margin-top: 10px;
 }
 
 .ryczalt-consent input {

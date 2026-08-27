@@ -51,13 +51,11 @@
     <section class="section-dark ryczalt-hero">
       <div class="container ryczalt-hero__grid">
         <div>
-          <p class="ryczalt-kicker">RYCZAŁT · tylko do 30 września 2026</p>
-          <h1>Księgowość na ryczałcie za <span>55 zł</span> miesięcznie</h1>
-          <p class="ryczalt-hero__lead">
-            <strong>Przez cały pierwszy rok.</strong> Księgowość online, faktury, KSeF, podatki i Twój księgowy w jednej appce.
-          </p>
+          <p class="ryczalt-kicker">tylko do 30 września 2026</p>
+          <h1>Księgowość na ryczałcie od <span>55 zł</span> miesięcznie</h1>
+          <p class="ryczalt-hero__lead">Księgowość online, faktury, KSeF, podatki i Twój księgowy w jednej appce.</p>
           <div class="ryczalt-hero__actions">
-            <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="change">PRZENOSZĘ KSIĘGOWOŚĆ</a>
+            <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="change">MAM JUŻ FIRMĘ</a>
             <a class="btn btn-ghost" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
           </div>
           <p class="ryczalt-hero__micro">
@@ -72,8 +70,8 @@
       <div class="container">
         <div class="ryczalt-section-head">
           <p class="eyebrow">Tak. Naprawdę 55 zł.</p>
-          <h2>To nie jest „OD” 55 zł</h2>
-          <p>Zero niejasnych, skomplikowanych warunków. Prosta cena i konkretny termin.</p>
+          <h2>Tu nie ma haczyka</h2>
+          <p>Jasne i proste warunki: decydujesz się przed 30.09.2026 r. i księgowość kosztuje Cię od 55 zł na miesiąc (660 zł za rok z góry).</p>
         </div>
 
         <div class="ryczalt-why">
@@ -119,7 +117,7 @@
       <div class="container ryczalt-guarantee__grid">
         <div class="ryczalt-guarantee__copy">
           <p class="eyebrow">Bez ryzyka</p>
-          <h2>Masz <span>30 dni</span>, żeby sprawdzić Firmus bez ryzyka.</h2>
+          <h2>Masz <span>30 dni</span>, żeby sprawdzić Firmus.</h2>
           <p>Podpisujesz umowę, opłacasz 660 zł i zaczynamy współpracę. Jeśli w ciągu 30 dni od podpisania umowy uznasz, że Firmus Ci nie odpowiada — rezygnujesz, a ja zwracam Ci całe 660 zł.</p>
           <p>Bez kary. Bez potrącania „pierwszego miesiąca”. Bez zobowiązania na pozostałą część roku.</p>
         </div>
@@ -148,7 +146,7 @@
         <div class="ryczalt-start__intro">
           <p class="eyebrow">Prosta umowa</p>
           <h2>Sprawdź warunki umowy</h2>
-          <p>Wypełnisz w 2 minuty - tylko podstawowe informacje</p>
+          <p>Podaj podstawowe informacje do wzoru umowy dla Ciebie - wypełnisz w 2 minuty</p>
         </div>
 
         <form class="ryczalt-wizard" name="firmus-umowa" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" id="ryczaltForm">
@@ -174,7 +172,7 @@
           </div>
 
           <div class="ryczalt-step" data-step="2" hidden>
-            <h3>2. Jaka jest skala?</h3>
+            <h3>Dokumenty do księgowania</h3>
             <p class="ryczalt-step__lead">Nie musi być co do sztuki — wybierz najbliższy przedział.</p>
 
             <fieldset class="ryczalt-choice-group">
@@ -197,14 +195,13 @@
             </fieldset>
 
             <div class="ryczalt-wizard__actions">
-              <button class="btn btn-ghost" type="button" data-prev>Wstecz</button>
               <button class="btn btn-primary" type="button" data-next disabled>Dalej</button>
             </div>
           </div>
 
           <div class="ryczalt-step" data-step="3" hidden>
             <h3>3. Ostatnie dane.</h3>
-            <p class="ryczalt-step__lead">Potrzebuję ich, żeby pokazać Ci właściwe warunki i tekst umowy.</p>
+            <p class="ryczalt-step__lead">Potrzebuję ich, żeby przygotować dla Ciebie właściwe warunki i tekst umowy.</p>
             <div class="ryczalt-form-grid">
               <label class="ryczalt-field">Imię / nazwa firmy<input type="text" name="imie_nazwa" id="ryczaltName" required autocomplete="name" /></label>
               <label class="ryczalt-field"><span>NIP <span id="ryczaltNipHint"></span></span><input type="text" name="nip" id="ryczaltNip" inputmode="numeric" autocomplete="off" /></label>
@@ -212,8 +209,7 @@
               <label class="ryczalt-field">Telefon<input type="tel" name="telefon" id="ryczaltPhone" required autocomplete="tel" /></label>
             </div>
             <div class="ryczalt-wizard__actions">
-              <button class="btn btn-ghost" type="button" data-prev>Wstecz</button>
-              <button class="btn btn-primary" type="button" data-check>CHCĘ WZÓR UMOWY</button>
+              <button class="btn btn-primary" type="button" data-check>CHCĘ OTRZYMAĆ WZÓR UMOWY</button>
             </div>
           </div>
 
@@ -223,12 +219,12 @@
               <strong>Najpierw sprawdź tekst umowy.</strong>
               <p>Zero ukrytych opłat, haczyków i drobnych druczków. Zobaczysz warunki przed podpisaniem i dopiero wtedy decydujesz.</p>
             </div>
+            <p class="ryczalt-consent-note">Zgoda na kontakt w sprawie przekazania warunków umowy. <a href="/polityka-prywatnosci.html">Polityka prywatności</a>.</p>
             <label class="ryczalt-consent">
               <input type="checkbox" name="zgoda_umowa_kontakt" value="tak" required />
-              <span>Chcę otrzymać tekst umowy i warunki współpracy. Akceptuję <a href="/polityka-prywatnosci.html">politykę prywatności</a>.</span>
+              <span>Chcę otrzymać wzór umowy i warunki współpracy.</span>
             </label>
             <div class="ryczalt-wizard__actions">
-              <button class="btn btn-ghost" type="button" data-prev>Wstecz</button>
               <button class="btn btn-primary" type="submit" id="ryczaltSubmit">SPRAWDŹ TEKST UMOWY</button>
             </div>
             <p class="ryczalt-step__lead" style="margin-top:18px">Wolisz od razu porozmawiać? <a href="tel:+48727791155"><strong>727 791 155</strong></a></p>
@@ -387,7 +383,7 @@
       `;
       document.getElementById("ryczaltPrice").value = "wycena indywidualna — powyżej 10 dokumentów";
       document.getElementById("ryczaltQualification").value = "większy zakres";
-      submit.textContent = "SPRAWDŹ WARUNKI DLA MOJEJ FIRMY";
+      submit.textContent = "SPRAWDŹ TEKST UMOWY";
     }
 
     setStep(4);
