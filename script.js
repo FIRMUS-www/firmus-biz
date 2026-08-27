@@ -292,7 +292,7 @@ function initRyczaltCampaignLoader() {
 
   if (!document.querySelector('script[data-ryczalt-script]')) {
     const script = document.createElement("script");
-    script.src = "/ryczalt.js?v=20260827-2";
+    script.src = "/ryczalt.js?v=20260827-3";
     script.defer = true;
     script.dataset.ryczaltScript = "true";
     document.head.appendChild(script);
