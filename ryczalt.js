@@ -53,7 +53,7 @@
         <div>
           <p class="ryczalt-kicker">tylko do 30 września 2026</p>
           <h1>Księgowość na ryczałcie od <span>55 zł</span> miesięcznie</h1>
-          <p class="ryczalt-hero__lead">Księgowość online, faktury, KSeF, podatki i Twój księgowy w jednej appce.</p>
+          <p class="ryczalt-hero__lead">Księgowość online, faktury, KSeF, podatki i Twój księgowy w jednej appce.<br /><strong>30 dni na testowanie z gwarancją zwrotu 100%</strong></p>
           <div class="ryczalt-hero__actions">
             <a class="btn btn-primary" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="change">MAM JUŻ FIRMĘ</a>
             <a class="btn btn-ghost" href="#ryczalt" data-scroll-target="ryczalt-start" data-ryczalt-scenario="start">DOPIERO ZAKŁADAM FIRMĘ</a>
