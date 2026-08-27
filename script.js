@@ -285,7 +285,7 @@ function initRyczaltCampaignLoader() {
   if (!document.querySelector('link[data-ryczalt-styles]')) {
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/ryczalt.css?v=20260827-1";
+    link.href = "/ryczalt.css?v=20260827-2";
     link.dataset.ryczaltStyles = "true";
     document.head.appendChild(link);
   }
