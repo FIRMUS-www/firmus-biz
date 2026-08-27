@@ -276,3 +276,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 // CONTRACT PILL FIX — END
+
+// RYCZALT CAMPAIGN LOADER — START
+function initRyczaltCampaignLoader() {
+  const isRootPath = ["", "/", "/index.html"].includes(window.location.pathname);
+  if (!isRootPath || window.location.hash !== "#ryczalt") return;
+
+  if (!document.querySelector('link[data-ryczalt-styles]')) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/ryczalt.css?v=20260827-2";
+    link.dataset.ryczaltStyles = "true";
+    document.head.appendChild(link);
+  }
+
+  if (!document.querySelector('script[data-ryczalt-script]')) {
+    const script = document.createElement("script");
+    script.src = "/ryczalt.js?v=20260827-1";
+    script.defer = true;
+    script.dataset.ryczaltScript = "true";
+    document.head.appendChild(script);
+  }
+}
+
+initRyczaltCampaignLoader();
+// RYCZALT CAMPAIGN LOADER — END
