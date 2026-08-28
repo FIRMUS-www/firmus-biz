@@ -54,7 +54,7 @@ jobs:
           source = str(item.get('source') or '')
           card = 'https://zarzad-radar.vercel.app/content-card.html?cr=' + urllib.parse.quote(cr)
 
-          parts = ['📢 NOWY CONTENT RADAR', title]
+          parts = ['📢 ' + title.upper()]
           if cr:
               parts.append(cr)
           if hook:
