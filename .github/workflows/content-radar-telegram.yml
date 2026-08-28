@@ -1,16 +1,12 @@
-name: Content Radar → Telegram
+name: Content Radar Telegram
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - content-radar/live.json
   workflow_dispatch:
-    inputs:
-      cr:
-        description: "Optional CR id to send as a test, e.g. CR-260828-05"
-        required: false
-        type: string
+  push:
+    branches:
+      - main
+    paths:
+      - 'content-radar/live.json'
 
 permissions:
   contents: read
@@ -19,73 +15,81 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
-      - name: Resolve new Content Radar entries
-        id: entries
+      - name: Send latest Content Radar card to Telegram
         shell: bash
-        run: |
-          set -euo pipefail
-          file="content-radar/live.json"
-          current="$(cat "$file")"
-
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            requested='${{ inputs.cr }}'
-            if [[ -n "$requested" ]]; then
-              jq -c --arg cr "$requested" '[.issues[] | select(.cr == $cr)]' "$file" > /tmp/new.json
-            else
-              jq -c '[.issues[0]]' "$file" > /tmp/new.json
-            fi
-          else
-            before='${{ github.event.before }}'
-            if [[ -z "$before" || "$before" == "0000000000000000000000000000000000000000" ]]; then
-              echo '[]' > /tmp/old-crs.json
-            else
-              git show "$before:$file" 2>/dev/null | jq -c '[.issues[].cr]' > /tmp/old-crs.json || echo '[]' > /tmp/old-crs.json
-            fi
-            jq -c --slurpfile old /tmp/old-crs.json '[.issues[] | select(.cr as $cr | ($old[0] | index($cr) | not))] | reverse' "$file" > /tmp/new.json
-          fi
-
-          count="$(jq 'length' /tmp/new.json)"
-          echo "count=$count" >> "$GITHUB_OUTPUT"
-
-      - name: Send Telegram notifications
-        if: steps.entries.outputs.count != '0'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        shell: bash
         run: |
           set -euo pipefail
-          if [[ -z "${TELEGRAM_BOT_TOKEN:-}" || -z "${TELEGRAM_CHAT_ID:-}" ]]; then
-            echo "Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID repository secret" >&2
-            exit 78
-          fi
+          python3 <<'PY'
+          import json
+          import os
+          import re
+          import urllib.parse
+          import urllib.request
 
-          jq -c '.[]' /tmp/new.json | while IFS= read -r item; do
-            title="$(jq -r '.title // "Nowy temat"' <<<"$item" | sed -E 's/^\[CONTENT\](\[[^]]+\])*[[:space:]]*CR-[0-9-]+[[:space:]]*[—-][[:space:]]*//')"
-            cr="$(jq -r '.cr // ""' <<<"$item")"
-            hook="$(jq -r '.hook // ""' <<<"$item")"
-            ready="$(jq -r '.ready // ""' <<<"$item")"
-            source="$(jq -r '.source // ""' <<<"$item")"
-            card="https://zarzad-radar.vercel.app/content-card.html?cr=$(python3 -c 'import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))' "$cr")"
+          token = os.environ.get('TELEGRAM_BOT_TOKEN', '').strip()
+          chat_id = os.environ.get('TELEGRAM_CHAT_ID', '').strip()
 
-            text="📢 NOWY CONTENT RADAR
+          if not token or not chat_id:
+              raise SystemExit('Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID repository secret')
 
-${title}"
-            [[ -n "$cr" ]] && text+=$'\n\n'"${cr}"
-            [[ -n "$hook" ]] && text+=$'\n\n'"HOOK:\n${hook}"
-            [[ -n "$ready" ]] && text+=$'\n\n'"GOTOWIEC:\n${ready}"
-            text+=$'\n\n'"Karta: ${card}"
-            [[ -n "$source" ]] && text+=$'\n'"Źródło: ${source}"
+          with open('content-radar/live.json', 'r', encoding='utf-8') as f:
+              data = json.load(f)
 
-            curl --fail-with-body --silent --show-error \
-              --request POST \
-              "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-              --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
-              --data-urlencode "text=${text}" \
-              --data-urlencode "disable_web_page_preview=true"
-          done
+          issues = data.get('issues') or []
+          if not issues:
+              raise SystemExit('content-radar/live.json has no issues')
+
+          item = issues[0]
+          raw_title = str(item.get('title') or 'Nowy temat')
+          title = re.sub(r'^\[CONTENT\](?:\[[^\]]+\])*\s*CR-[0-9-]+\s*[—-]\s*', '', raw_title)
+          cr = str(item.get('cr') or '')
+          hook = str(item.get('hook') or '')
+          ready = str(item.get('ready') or '')
+          source = str(item.get('source') or '')
+          card = 'https://zarzad-radar.vercel.app/content-card.html?cr=' + urllib.parse.quote(cr)
+
+          parts = ['📢 NOWY CONTENT RADAR', title]
+          if cr:
+              parts.append(cr)
+          if hook:
+              parts.append('HOOK:\n' + hook)
+          if ready:
+              parts.append('GOTOWIEC:\n' + ready)
+          parts.append('Karta: ' + card)
+          if source:
+              parts.append('Źródło: ' + source)
+
+          text = '\n\n'.join(parts)
+          if len(text) > 3900:
+              text = text[:3850] + '\n\n…\n' + 'Karta: ' + card
+
+          payload = urllib.parse.urlencode({
+              'chat_id': chat_id,
+              'text': text,
+              'disable_web_page_preview': 'true',
+          }).encode('utf-8')
+
+          req = urllib.request.Request(
+              f'https://api.telegram.org/bot{token}/sendMessage',
+              data=payload,
+              method='POST',
+          )
+
+          try:
+              with urllib.request.urlopen(req, timeout=20) as resp:
+                  body = resp.read().decode('utf-8', errors='replace')
+          except Exception as exc:
+              raise SystemExit(f'Telegram send failed: {exc}')
+
+          result = json.loads(body)
+          if not result.get('ok'):
+              raise SystemExit('Telegram API returned ok=false: ' + body)
+
+          print('Telegram notification sent successfully')
+          PY
