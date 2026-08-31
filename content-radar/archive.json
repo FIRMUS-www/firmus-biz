@@ -1,5 +1,73 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-08-31T16:48:00+02:00",
-  "issues": []
+  "updatedAt": "2026-08-31T18:04:00+02:00",
+  "issues": [
+    {
+      "number": 75,
+      "title": "[CONTENT][KANDYDAT][MIKROFIRMA][PAIN] CR-260831-09 — 41% mikroprzedsiębiorców nie wie, ile zarobi w kolejnym miesiącu",
+      "cr": "CR-260831-09",
+      "recommendation": "👀 DO ROZWAŻENIA",
+      "status": "KANDYDAT",
+      "createdAt": "2026-08-31T15:20:25Z",
+      "what": "W badaniu KRD „Na własny rachunek” 41% mikroprzedsiębiorców deklaruje brak pewności co do zarobku w kolejnym miesiącu, a co trzeci wskazuje stres i brak poczucia bezpieczeństwa. Jednocześnie tylko 1,8% respondentów uważa, że własny biznes nie ma żadnych zalet.",
+      "why": "To mocny kontrast między wolnością na swoim a finansową nieprzewidywalnością, bardzo bliski realnemu doświadczeniu JDG. Nadaje się do rozmowy o cashflow, podatkach i tym, czego nie pokazują narracje o „przedsiębiorcach-milionerach”.",
+      "angle": "Nie poradnik, tylko głos właściciela małej firmy: niezależność jest realną korzyścią, ale jej ceną bywa życie bez pewności kolejnego miesiąca. Może otworzyć dyskusję z odbiorcami o tym, co najbardziej obciąża psychicznie w prowadzeniu firmy.",
+      "risk": "Badanie jest publikowane przez podmiot komercyjny i nie jest nowym wydarzeniem dnia. Nie mieszać „zarobku” z przychodem ani wyniku badania z obiektywną kondycją wszystkich mikrofirm.",
+      "source": "https://krd.pl/centrum-prasowe/informacje-prasowe/2026/sam-sobie-szefem-ksiegowym-i-prawnikiem-98-proc"
+    },
+    {
+      "number": 74,
+      "title": "[CONTENT][KANDYDAT][KSeF][NEWS] CR-260831-08 — Nie każda firmowa faktura za przejazd musi trafić do KSeF",
+      "cr": "CR-260831-08",
+      "recommendation": "👀 DO ROZWAŻENIA",
+      "status": "KANDYDAT",
+      "createdAt": "2026-08-31T15:20:11Z",
+      "what": "Rzeczpospolita przypomina, że obowiązek KSeF nie oznacza zniknięcia wszystkich dokumentów traktowanych jak faktury poza systemem. Przepisy wykonawcze przewidują wyjątki uwzględniające specyfikę m.in. części biletów za przejazd.",
+      "why": "To praktyczny detal, który może interesować każdą małą firmę rozliczającą przejazdy służbowe. Jest też dobrym kontrapunktem do narracji „od teraz każda faktura jest tylko w KSeF”.",
+      "angle": "Krótki format „KSeF bez paniki”: jeden konkretny wyjątek, który przedsiębiorca może spotkać w normalnym życiu. Dobrze nadaje się do serii obalającej uproszczenia i mity wokół KSeF.",
+      "risk": "Przy rozwinięciu trzeba precyzyjnie rozdzielić rodzaje biletów i warunki, bo nie każdy dowolny bilet automatycznie jest fakturą.",
+      "source": "https://pro.rp.pl/krajowy-system-e-faktur-ksef/art45051261-julita-karas-gasparska-bilet-zamiast-faktury-w-ksef"
+    },
+    {
+      "number": 73,
+      "title": "[CONTENT][KANDYDAT][JDG][NEWS] CR-260831-07 — Taksówki: 59,2 mln zł zaległości i 1,2 tys. firm mniej w pół roku",
+      "cr": "CR-260831-07",
+      "recommendation": "🔥 MOCNY",
+      "status": "KANDYDAT",
+      "createdAt": "2026-08-31T15:19:58Z",
+      "what": "Rzeczpospolita podaje za KRD, że zaległe zadłużenie przedsiębiorców świadczących przewozy pasażerskie wzrosło z 55,7 mln zł w sierpniu 2025 r. do 59,2 mln zł obecnie. Średni dług dłużnika to 22,7 tys. zł, a w pierwszej połowie 2026 r. liczba podmiotów w branży zmniejszyła się o ok. 1,2 tys.",
+      "why": "To bardzo konkretny radar zawodu dla tysięcy JDG i kierowców działających przez aplikacje. Pokazuje różnicę między rosnącą popularnością usługi a ekonomią pojedynczego mikroprzedsiębiorcy.",
+      "angle": "Dobry punkt wyjścia do pytania: ile naprawdę zostaje kierowcy po paliwie, leasingu, prowizji platformy, ZUS i podatku?",
+      "risk": "Nie wolno z samych danych o długach wyciągać wniosku, że cała branża jest nierentowna. Liczby obejmują zadłużone podmioty.",
+      "source": "https://www.rp.pl/transport/art45074831-drogie-paliwo-topi-w-dlugach-tysiace-taksowek"
+    },
+    {
+      "number": 72,
+      "title": "[CONTENT][KANDYDAT][PODATKI][DISCOVERY] CR-260831-06 — Salon w części domu męża: remont może wypaść z kosztów",
+      "cr": "CR-260831-06",
+      "recommendation": "🔥 MOCNY",
+      "status": "KANDYDAT",
+      "createdAt": "2026-08-31T15:19:44Z",
+      "what": "Podatniczka urządziła salon w użyczonej części domu należącego do męża i poniosła m.in. ok. 40 tys. zł kosztów remontu oraz 8 125 zł projektu. KIS uznała zasadnicze nakłady za inwestycję w obcym środku trwałym, ale ponieważ budynek pozostaje mieszkalny i lokal nie ma odrębnej własności, odpisy amortyzacyjne są wyłączone.",
+      "why": "Bardzo praktyczny przypadek małej usługowej firmy prowadzonej w części rodzinnego domu. Pokazuje podatkową pułapkę, w której realny wydatek potrzebny do uruchomienia biznesu może nie dać kosztu podatkowego.",
+      "angle": "Dobry materiał z życia małej firmy: lokal formalnie jest usługowy i ma osobne wejście, ale brak wyodrębnionej własności zmienia podatkowy efekt remontu.",
+      "risk": "To interpretacja indywidualna i dotyczy bardzo konkretnego stanu faktycznego. To nie temat ryczałtowy — podatniczka rozlicza skalę i KPiR.",
+      "source": "https://qmap.pl/interpretacje/0115-kdit3-4011-494-2026-3-js"
+    },
+    {
+      "number": 71,
+      "title": "[CONTENT][NOWE][JDG][X+SLIDES] CR-260831-05 — Firma ma okresowe kłopoty? PARP finansuje diagnozę i doradztwo bez wkładu własnego",
+      "cr": "CR-260831-05",
+      "recommendation": "👀 DO ROZWAŻENIA",
+      "status": "NOWE",
+      "createdAt": "2026-08-31T14:18:45Z",
+      "what": "PARP prowadzi program „Wsparcie firm w okresowych trudnościach – oferta dla przedsiębiorców”. Jest skierowany do mikro, małych i średnich firm, w tym samozatrudnionych działających co najmniej 12 miesięcy i kwalifikujących się po Autodiagnozie jako firmy w okresowych trudnościach. Wsparcie finansuje diagnozę, doradztwo i usługi rozwojowe; maksymalnie 19 928 zł dla samozatrudnionych bez pracowników, 77 192 zł dla mikro i małych firm oraz 154 384 zł dla średnich, bez wkładu własnego.",
+      "why": "Mała firma często reaguje dopiero wtedy, gdy problem z płynnością jest już pożarem. Ten program jest pomyślany wcześniej: dla firm, które nadal działają, ale widzą okresowe trudności i potrzebują diagnozy oraz planu naprawczego.",
+      "angle": "Przedsiębiorcy zwykle pokazuje się dotacje wtedy, gdy ma inwestować, kupować, rosnąć. Tu jest coś mniej efektownego, ale czasem dużo ważniejszego: pieniądze na to, żeby zatrzymać się zanim okresowy problem zrobi się trwałym kryzysem.",
+      "hook": "Firma zaczyna mieć problemy z płynnością albo kosztami? PARP ma program, w którym samozatrudniony może dostać do 19 928 zł wsparcia na diagnozę, doradztwo i rozwój — bez wkładu własnego.",
+      "ready": "Masz firmę od co najmniej roku i zaczynasz widzieć, że coś się rozjeżdża: płynność, koszty, organizacja? PARP ma program dla firm w okresowych trudnościach. Samozatrudniony: do 19 928 zł wsparcia. Mikro/mała firma: do 77 192 zł. Bez wkładu własnego. To nie jest gotówka na cokolwiek — program finansuje diagnozę, doradztwo i usługi rozwojowe, które mają pomóc firmie wyjść z okresowych problemów.",
+      "risk": "Program był komunikowany już w czerwcu, więc nie ma mocnego dzisiejszego triggera. To materiał użytkowy/evergreen, nie news. Wsparcie nie jest gotówką do dowolnego użycia i wymaga spełnienia kryteriów.",
+      "source": "https://www.parp.gov.pl/component/content/article/90721:klopoty-w-firmie-skorzystaj-z-bezplatnego-doradztwa-w-ramach-programu-parp-dla-przedsiebiorcow"
+    }
+  ]
 }
