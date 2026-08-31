@@ -1,5 +1,19 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-08-31T17:20:41Z",
-  "issues": []
+  "updatedAt": "2026-08-31T21:12:48Z",
+  "issues": [
+    {
+      "number": 84,
+      "title": "[CONTENT][KANDYDAT][ZUS][PRAKTYKA] CR-260831-18 — Od 4 września mZUS wymaga Androida 11 i nowego PIN-u",
+      "cr": "CR-260831-18",
+      "recommendation": "👀 DO ROZWAŻENIA",
+      "status": "KANDYDAT",
+      "createdAt": "2026-08-31T21:12:48Z",
+      "what": "ZUS podał 31 sierpnia, że od 4 września mZUS będzie działać na urządzeniach z Androidem 11 lub wyższym. Użytkownik będzie też musiał ustawić nowy PIN do aplikacji o długości 6–8 cyfr.",
+      "why": "To mały, ale praktyczny sygnał dla przedsiębiorców korzystających z mZUS na starszym telefonie. Daje prosty materiał typu „sprawdź telefon zanim aplikacja odmówi współpracy”.",
+      "angle": "Użyteczność ponad sensację: przedsiębiorca może dowiedzieć się o zmianie dopiero przy próbie logowania. Dobry krótki kandydat OGARNIJ TO.",
+      "risk": "Dotyczy aplikacji mZUS i urządzeń z Androidem; nie oznacza zmiany zasad korzystania z eZUS w przeglądarce. Temat ma małą wagę redakcyjną i może być zbyt techniczny na samodzielny post.",
+      "source": "https://www.zus.pl/o-zus/komunikaty/-/asset_publisher/MjyWa4JLZeZ8/content/id/14407322?_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_MjyWa4JLZeZ8_languageId=pl_PL"
+    }
+  ]
 }
