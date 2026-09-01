@@ -1,19 +1,5 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-01T00:19:21Z",
-  "issues": [
-    {
-      "number": 85,
-      "title": "[CONTENT][KANDYDAT][JDG][NEWS] CR-260901-01 — Od dziś nowy wniosek o WZ wymaga obowiązującego planu ogólnego gminy",
-      "cr": "CR-260901-01",
-      "recommendation": "🔥 MOCNY",
-      "status": "KANDYDAT",
-      "createdAt": "2026-09-01T00:19:21Z",
-      "what": "Od 1 września 2026 r. w gminie, w której nie wszedł w życie plan ogólny, decyzja o warunkach zabudowy może być co do zasady wydana tylko w postępowaniu wszczętym przed tą datą. MRiT potwierdza tę zasadę w oficjalnym FAQ reformy planowania przestrzennego.",
-      "why": "To świeża zmiana dla przedsiębiorcy planującego lokal, warsztat, magazyn albo inną inwestycję na terenie bez miejscowego planu. Skutek zależy od konkretnej gminy i statusu jej planu ogólnego.",
-      "angle": "Termin wykonania reformy przez gminę przekłada się bezpośrednio na możliwości inwestycyjne prywatnej firmy. Dobry praktyczny temat o styku administracji i małego biznesu.",
-      "risk": "Nie oznacza to paraliżu wszystkich inwestycji: zachowują moc obowiązujące MPZP i wcześniejsze prawomocne WZ, a wcześniej wszczęte postępowania mogą być kontynuowane; istnieją też ustawowe wyjątki.",
-      "source": "https://www.gov.pl/web/rozwoj-technologia/reforma-planowania-przestrzennego-2"
-    }
-  ]
+  "updatedAt": "2026-09-01T00:59:42Z",
+  "issues": []
 }
