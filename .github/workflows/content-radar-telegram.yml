@@ -1,95 +1,14 @@
-name: Content Radar Telegram
+name: Content Radar Telegram (deprecated)
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - 'content-radar/live.json'
 
 permissions:
   contents: read
 
 jobs:
-  notify:
+  retired:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Send latest Content Radar card to Telegram
-        shell: bash
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          set -euo pipefail
-          python3 <<'PY'
-          import json
-          import os
-          import re
-          import urllib.parse
-          import urllib.request
-
-          token = os.environ.get('TELEGRAM_BOT_TOKEN', '').strip()
-          chat_id = os.environ.get('TELEGRAM_CHAT_ID', '').strip()
-
-          if not token or not chat_id:
-              raise SystemExit('Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID repository secret')
-
-          with open('content-radar/live.json', 'r', encoding='utf-8') as f:
-              data = json.load(f)
-
-          issues = data.get('issues') or []
-          if not issues:
-              raise SystemExit('content-radar/live.json has no issues')
-
-          item = issues[0]
-          raw_title = str(item.get('title') or 'Nowy temat')
-          title = re.sub(r'^\[CONTENT\](?:\[[^\]]+\])*\s*CR-[0-9-]+\s*[—-]\s*', '', raw_title)
-          cr = str(item.get('cr') or '')
-          hook = str(item.get('hook') or '')
-          ready = str(item.get('ready') or '')
-          source = str(item.get('source') or '')
-          card = 'https://zarzad-radar.vercel.app/content-card.html?cr=' + urllib.parse.quote(cr)
-
-          parts = ['📢 ' + title.upper()]
-          if cr:
-              parts.append(cr)
-          if hook:
-              parts.append('HOOK:\n' + hook)
-          if ready:
-              parts.append('GOTOWIEC:\n' + ready)
-          parts.append('Karta: ' + card)
-          if source:
-              parts.append('Źródło: ' + source)
-
-          text = '\n\n'.join(parts)
-          if len(text) > 3900:
-              text = text[:3850] + '\n\n…\n' + 'Karta: ' + card
-
-          payload = urllib.parse.urlencode({
-              'chat_id': chat_id,
-              'text': text,
-              'disable_web_page_preview': 'true',
-          }).encode('utf-8')
-
-          req = urllib.request.Request(
-              f'https://api.telegram.org/bot{token}/sendMessage',
-              data=payload,
-              method='POST',
-          )
-
-          try:
-              with urllib.request.urlopen(req, timeout=20) as resp:
-                  body = resp.read().decode('utf-8', errors='replace')
-          except Exception as exc:
-              raise SystemExit(f'Telegram send failed: {exc}')
-
-          result = json.loads(body)
-          if not result.get('ok'):
-              raise SystemExit('Telegram API returned ok=false: ' + body)
-
-          print('Telegram notification sent successfully')
-          PY
+      - name: Deprecated workflow
+        run: echo "JSON-based Content Radar notification workflow is retired. Supabase is the only runtime source of truth."
